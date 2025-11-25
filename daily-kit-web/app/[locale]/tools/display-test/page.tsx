@@ -176,8 +176,8 @@ export default function DisplayTestPage() {
                         <section>
                             <h2 className="text-2xl font-bold text-gray-900 mb-4">Why Test Your Display?</h2>
                             <p className="text-gray-600 leading-relaxed">
-                                Whether you've just bought a new monitor, laptop, or smartphone, or you're troubleshooting an old one,
-                                verifying your screen's health is crucial. Manufacturing defects like dead pixels or backlight bleeding
+                                Whether you&apos;ve just bought a new monitor, laptop, or smartphone, or you&apos;re troubleshooting an old one,
+                                verifying your screen&apos;s health is crucial. Manufacturing defects like dead pixels or backlight bleeding
                                 can affect your viewing experience. Our <strong>Display Test</strong> tool helps you identify these issues quickly and easily
                                 directly from your browser, with no software installation required.
                             </p>
@@ -216,7 +216,7 @@ export default function DisplayTestPage() {
                         <section>
                             <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Use This Tool</h2>
                             <ul className="list-disc list-inside text-gray-600 space-y-2 leading-relaxed ml-4">
-                                <li><strong>Dead Pixel Test:</strong> Cycles through solid primary colors (Red, Green, Blue, White, Black). Look for any tiny dots that don't match the background color.</li>
+                                <li><strong>Dead Pixel Test:</strong> Cycles through solid primary colors (Red, Green, Blue, White, Black). Look for any tiny dots that don&apos;t match the background color.</li>
                                 <li><strong>Contrast Test:</strong> Displays a grayscale gradient. A good monitor should allow you to distinguish between each step of the gradient, especially the darkest and lightest ends.</li>
                                 <li><strong>Fullscreen Mode:</strong> For the most accurate results, the tests automatically enter fullscreen mode to remove browser distractions.</li>
                             </ul>
