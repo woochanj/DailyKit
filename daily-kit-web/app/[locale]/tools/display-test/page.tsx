@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Monitor, Grid3x3 } from "lucide-react";
+import { useTranslations } from 'next-intl';
 
 type TestMode = "idle" | "dead-pixel" | "contrast";
 
@@ -18,6 +19,7 @@ const PIXEL_COLORS = [
 ];
 
 export default function DisplayTestPage() {
+    const t = useTranslations('DisplayTest');
     const [testMode, setTestMode] = useState<TestMode>("idle");
     const [colorIndex, setColorIndex] = useState(0);
 
@@ -128,12 +130,10 @@ export default function DisplayTestPage() {
                 <div className="main-wrapper">
                     <div className="mb-16 text-center animate-[fadeIn_0.5s_ease-out]">
                         <h1 className="text-5xl font-bold tracking-tight text-gray-900 sm:text-6xl mb-4">
-                            Display Test
+                            {t('title')}
                         </h1>
-                        <p className="subtitle max-w-2xl mx-auto">
-                            Check for dead pixels and backlight bleeding on your screen.
-                            <br />
-                            Test your monitor's contrast and color accuracy.
+                        <p className="subtitle max-w-2xl mx-auto whitespace-pre-line">
+                            {t('description')}
                         </p>
                     </div>
 
@@ -147,8 +147,8 @@ export default function DisplayTestPage() {
                                 <Monitor size={24} />
                             </div>
                             <div className="text-left flex-1">
-                                <h3 className="font-semibold text-lg text-gray-900">Dead Pixel Test</h3>
-                                <p className="text-sm text-gray-500">Cycle through solid colors</p>
+                                <h3 className="font-semibold text-lg text-gray-900">{t('deadPixelTitle')}</h3>
+                                <p className="text-sm text-gray-500">{t('deadPixelDesc')}</p>
                             </div>
                         </button>
 
@@ -161,25 +161,24 @@ export default function DisplayTestPage() {
                                 <Grid3x3 size={24} />
                             </div>
                             <div className="text-left flex-1">
-                                <h3 className="font-semibold text-lg text-gray-900">Contrast Test</h3>
-                                <p className="text-sm text-gray-500">Grayscale gradient levels</p>
+                                <h3 className="font-semibold text-lg text-gray-900">{t('contrastTitle')}</h3>
+                                <p className="text-sm text-gray-500">{t('contrastDesc')}</p>
                             </div>
                         </button>
                     </div>
 
                     <p className="mt-12 text-sm text-gray-400 text-center mb-20">
-                        💡 Tests enter fullscreen mode. Click or press Space to cycle through colors.
+                        {t('instruction')}
                     </p>
 
                     {/* SEO Content Section */}
                     <div className="max-w-3xl mx-auto text-left space-y-12 pb-20">
                         <section>
-                            <h2 className="text-2xl font-bold text-gray-900 mb-4">Why Test Your Display?</h2>
+                            <h2 className="text-2xl font-bold text-gray-900 mb-4">{t('whyTestTitle')}</h2>
                             <p className="text-gray-600 leading-relaxed">
-                                Whether you&apos;ve just bought a new monitor, laptop, or smartphone, or you&apos;re troubleshooting an old one,
-                                verifying your screen&apos;s health is crucial. Manufacturing defects like dead pixels or backlight bleeding
-                                can affect your viewing experience. Our <strong>Display Test</strong> tool helps you identify these issues quickly and easily
-                                directly from your browser, with no software installation required.
+                                {t.rich('whyTestDesc', {
+                                    b: (chunks) => <strong>{chunks}</strong>
+                                })}
                             </p>
                         </section>
 
@@ -187,38 +186,46 @@ export default function DisplayTestPage() {
                             <section className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
                                 <h3 className="text-lg font-semibold text-gray-900 mb-3 flex items-center gap-2">
                                     <span className="w-2 h-2 rounded-full bg-red-500"></span>
-                                    Dead vs. Stuck Pixels
+                                    {t('deadVsStuckTitle')}
                                 </h3>
-                                <p className="text-sm text-gray-600 leading-relaxed">
-                                    <strong>Dead Pixels</strong> are pixels that fail to light up, appearing as black dots on a bright background.
-                                    They are usually permanent hardware faults.
-                                    <br /><br />
-                                    <strong>Stuck Pixels</strong> are pixels frozen in a specific color (Red, Green, or Blue).
-                                    Unlike dead pixels, stuck pixels can sometimes be fixed by rapidly flashing colors over the area,
-                                    which forces the liquid crystal to reset.
+                                <p className="text-sm text-gray-600 leading-relaxed whitespace-pre-line">
+                                    {t.rich('deadVsStuckDesc', {
+                                        b: (chunks) => <strong>{chunks}</strong>
+                                    })}
                                 </p>
                             </section>
 
                             <section className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
                                 <h3 className="text-lg font-semibold text-gray-900 mb-3 flex items-center gap-2">
                                     <span className="w-2 h-2 rounded-full bg-blue-500"></span>
-                                    Backlight Bleeding
+                                    {t('backlightTitle')}
                                 </h3>
                                 <p className="text-sm text-gray-600 leading-relaxed">
-                                    Backlight bleeding occurs when light from the monitor's backlight leaks around the edges of the screen.
-                                    It is most visible when viewing dark scenes in a dimly lit room.
-                                    Use our <strong>Black Screen Test</strong> (the first color in the cycle) to check for uneven brightness
-                                    along the bezels of your display.
+                                    {t.rich('backlightDesc', {
+                                        b: (chunks) => <strong>{chunks}</strong>
+                                    })}
                                 </p>
                             </section>
                         </div>
 
                         <section>
-                            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Use This Tool</h2>
+                            <h2 className="text-2xl font-bold text-gray-900 mb-4">{t('howToUseTitle')}</h2>
                             <ul className="list-disc list-inside text-gray-600 space-y-2 leading-relaxed ml-4">
-                                <li><strong>Dead Pixel Test:</strong> Cycles through solid primary colors (Red, Green, Blue, White, Black). Look for any tiny dots that don&apos;t match the background color.</li>
-                                <li><strong>Contrast Test:</strong> Displays a grayscale gradient. A good monitor should allow you to distinguish between each step of the gradient, especially the darkest and lightest ends.</li>
-                                <li><strong>Fullscreen Mode:</strong> For the most accurate results, the tests automatically enter fullscreen mode to remove browser distractions.</li>
+                                <li>
+                                    {t.rich('howToDeadPixel', {
+                                        b: (chunks) => <strong>{chunks}</strong>
+                                    })}
+                                </li>
+                                <li>
+                                    {t.rich('howToContrast', {
+                                        b: (chunks) => <strong>{chunks}</strong>
+                                    })}
+                                </li>
+                                <li>
+                                    {t.rich('howToFullscreen', {
+                                        b: (chunks) => <strong>{chunks}</strong>
+                                    })}
+                                </li>
                             </ul>
                         </section>
                     </div>
@@ -235,7 +242,7 @@ export default function DisplayTestPage() {
                     tabIndex={0}
                 >
                     <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/80 text-sm">
-                        Click or press Space to continue • ESC to exit
+                        {t('clickToContinue')}
                     </div>
                 </div>
             )}
@@ -263,7 +270,7 @@ export default function DisplayTestPage() {
                         ))}
                     </div>
                     <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-gray-400 text-sm">
-                        Click or press ESC to exit
+                        {t('clickToExit')}
                     </div>
                 </div>
             )}

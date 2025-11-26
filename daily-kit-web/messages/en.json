@@ -1,5 +1,26 @@
 {
   "Index": {
     "greeting": "Hello World!"
+  },
+  "DisplayTest": {
+    "title": "Display Test",
+    "description": "Check for dead pixels and backlight bleeding on your screen.\nTest your monitor's contrast and color accuracy.",
+    "deadPixelTitle": "Dead Pixel Test",
+    "deadPixelDesc": "Cycle through solid colors",
+    "contrastTitle": "Contrast Test",
+    "contrastDesc": "Grayscale gradient levels",
+    "instruction": "💡 Tests enter fullscreen mode. Click or press Space to cycle through colors.",
+    "whyTestTitle": "Why Test Your Display?",
+    "whyTestDesc": "Whether you've just bought a new monitor, laptop, or smartphone, or you're troubleshooting an old one, verifying your screen's health is crucial. Manufacturing defects like dead pixels or backlight bleeding can affect your viewing experience. Our <b>Display Test</b> tool helps you identify these issues quickly and easily directly from your browser, with no software installation required.",
+    "deadVsStuckTitle": "Dead vs. Stuck Pixels",
+    "deadVsStuckDesc": "<b>Dead Pixels</b> are pixels that fail to light up, appearing as black dots on a bright background. They are usually permanent hardware faults.\n\n<b>Stuck Pixels</b> are pixels frozen in a specific color (Red, Green, or Blue). Unlike dead pixels, stuck pixels can sometimes be fixed by rapidly flashing colors over the area, which forces the liquid crystal to reset.",
+    "backlightTitle": "Backlight Bleeding",
+    "backlightDesc": "Backlight bleeding occurs when light from the monitor's backlight leaks around the edges of the screen. It is most visible when viewing dark scenes in a dimly lit room. Use our <b>Black Screen Test</b> (the first color in the cycle) to check for uneven brightness along the bezels of your display.",
+    "howToUseTitle": "How to Use This Tool",
+    "howToDeadPixel": "<b>Dead Pixel Test:</b> Cycles through solid primary colors (Red, Green, Blue, White, Black). Look for any tiny dots that don't match the background color.",
+    "howToContrast": "<b>Contrast Test:</b> Displays a grayscale gradient. A good monitor should allow you to distinguish between each step of the gradient, especially the darkest and lightest ends.",
+    "howToFullscreen": "<b>Fullscreen Mode:</b> For the most accurate results, the tests automatically enter fullscreen mode to remove browser distractions.",
+    "clickToContinue": "Click or press Space to continue • ESC to exit",
+    "clickToExit": "Click or press ESC to exit"
   }
 }
