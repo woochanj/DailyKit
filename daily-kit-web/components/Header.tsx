@@ -2,20 +2,20 @@
 
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from '@/i18n/routing';
+import { useLocale } from 'next-intl';
 import { Globe } from 'lucide-react';
 
 export default function Header() {
   const [isHidden, setIsHidden] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
-  const [language, setLanguage] = useState<'en' | 'ko'>('en');
+  const locale = useLocale();
+  const router = useRouter();
   const pathname = usePathname();
 
   const toggleLanguage = () => {
-    const newLang = language === 'en' ? 'ko' : 'en';
-    setLanguage(newLang);
-    // Here you would typically trigger a language change in your i18n framework
-    console.log(`Language switched to ${newLang}`);
+    const newLang = locale === 'en' ? 'ko' : 'en';
+    router.replace(pathname, { locale: newLang });
   };
 
   useEffect(() => {
@@ -75,7 +75,7 @@ export default function Header() {
             aria-label="Switch Language"
           >
             <Globe size={18} />
-            <span className="text-sm font-medium">{language.toUpperCase()}</span>
+            <span className="text-sm font-medium">{locale.toUpperCase()}</span>
           </button>
         </nav>
       </div>
