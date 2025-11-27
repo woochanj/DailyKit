@@ -1,6 +1,17 @@
 {
   "Index": {
-    "greeting": "세상아 안녕!"
+    "greeting": "세상아 안녕!",
+    "displayTestTitle": "Display Test",
+    "displayTestDesc": "불량 화소, 색상, 밝기 등을 테스트합니다.",
+    "jsonFormatterTitle": "JSON Formatter",
+    "jsonFormatterDesc": "JSON 데이터를 검증하고 포맷팅합니다.",
+    "devDataTitle": "개발 & 데이터",
+    "devDataDesc": "개발자와 데이터 처리를 위한 도구.",
+    "screenDeviceTestsTitle": "화면 및 기기 테스트",
+    "screenDeviceTestsDesc": "화면과 기기를 테스트하세요.",
+    "healthLifeTitle": "Health & Life",
+    "healthLifeDesc": "건강 및 일상 생활을 위한 계산기.",
+    "popularToolsTitle": "가장 인기 있는 도구"
   },
   "DisplayTest": {
     "title": "디스플레이 테스트",
@@ -22,5 +33,35 @@
     "howToFullscreen": "<b>전체 화면 모드:</b> 가장 정확한 결과를 위해 테스트는 자동으로 전체 화면 모드로 전환되어 브라우저의 방해 요소를 제거합니다.",
     "clickToContinue": "클릭 또는 스페이스바를 눌러 계속 • ESC로 종료",
     "clickToExit": "클릭 또는 ESC를 눌러 종료"
+  },
+  "Metadata": {
+    "DisplayTest": {
+      "title": "무료 온라인 모니터 불량화소 테스트 | DailyKit",
+      "description": "설치 없이 웹에서 간편하게 모니터 불량화소, 빛샘 현상, 화면 균일도를 테스트해보세요."
+    },
+    "Index": {
+      "title": "DailyKit - 개발자 및 생활 편의 도구 모음",
+      "description": "개발자와 일상 생활에 유용한 도구 모음입니다. 디스플레이 테스트, JSON 포맷터, BMI 계산기 등을 제공합니다."
+    },
+    "DevData": {
+      "title": "개발 & 데이터 도구 | DailyKit",
+      "description": "개발자와 데이터 처리를 위한 필수 도구 모음입니다."
+    },
+    "ScreenDeviceTests": {
+      "title": "화면 및 기기 테스트 | DailyKit",
+      "description": "온라인으로 화면, 모니터, 기기를 테스트하세요."
+    },
+    "Health": {
+      "title": "건강 및 생활 도구 | DailyKit",
+      "description": "BMI 계산기 등 건강과 일상 생활을 위한 계산기 및 도구입니다."
+    },
+    "JsonFormatter": {
+      "title": "JSON 포맷터 & 검증기 | DailyKit",
+      "description": "무료로 JSON 데이터를 검증하고, 포맷팅하고, 예쁘게 정리하세요."
+    },
+    "BmiCalculator": {
+      "title": "BMI 계산기 - 비만도 측정 | DailyKit",
+      "description": "간편하게 체질량지수(BMI)를 계산하고 건강 상태를 확인하세요."
+    }
   }
 }

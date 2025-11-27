@@ -18,7 +18,7 @@ const PIXEL_COLORS = [
     "#808080",
 ];
 
-export default function DisplayTestPage() {
+export default function DisplayTestClient() {
     const t = useTranslations('DisplayTest');
     const [testMode, setTestMode] = useState<TestMode>("idle");
     const [colorIndex, setColorIndex] = useState(0);

@@ -1,6 +1,17 @@
 {
   "Index": {
-    "greeting": "Hello World!"
+    "greeting": "Hello World!",
+    "displayTestTitle": "Display Test",
+    "displayTestDesc": "Test Dead pixel, color, and brightness, etc.",
+    "jsonFormatterTitle": "JSON Formatter",
+    "jsonFormatterDesc": "Validate JSON data.",
+    "devDataTitle": "Dev & Data",
+    "devDataDesc": "Tools for developers and data processing.",
+    "screenDeviceTestsTitle": "Screen & Device Tests",
+    "screenDeviceTestsDesc": "Test your screen and devices.",
+    "healthLifeTitle": "Health & Life",
+    "healthLifeDesc": "Calculators for health and daily life.",
+    "popularToolsTitle": "Most Popular Tools"
   },
   "DisplayTest": {
     "title": "Display Test",
@@ -22,5 +33,35 @@
     "howToFullscreen": "<b>Fullscreen Mode:</b> For the most accurate results, the tests automatically enter fullscreen mode to remove browser distractions.",
     "clickToContinue": "Click or press Space to continue • ESC to exit",
     "clickToExit": "Click or press ESC to exit"
+  },
+  "Metadata": {
+    "DisplayTest": {
+      "title": "Free Online Display Test - Check Dead Pixels | DailyKit",
+      "description": "Easily check your monitor for dead pixels, backlight bleeding, and screen uniformity with our free online test tool."
+    },
+    "Index": {
+      "title": "DailyKit - Your Daily Developer & Health Tools",
+      "description": "A collection of useful tools for developers and daily life. Includes Display Test, JSON Formatter, BMI Calculator, and more."
+    },
+    "DevData": {
+      "title": "Dev & Data Tools | DailyKit",
+      "description": "Essential tools for developers and data processing."
+    },
+    "ScreenDeviceTests": {
+      "title": "Screen & Device Tests | DailyKit",
+      "description": "Test your screen, monitor, and devices online."
+    },
+    "Health": {
+      "title": "Health & Life Tools | DailyKit",
+      "description": "Calculators and tools for your health and daily life, including BMI Calculator."
+    },
+    "JsonFormatter": {
+      "title": "JSON Formatter & Validator | DailyKit",
+      "description": "Validate, format, and beautify your JSON data online for free."
+    },
+    "BmiCalculator": {
+      "title": "BMI Calculator - Check Your Body Mass Index | DailyKit",
+      "description": "Calculate your Body Mass Index (BMI) easily and check your health status."
+    }
   }
 }

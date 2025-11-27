@@ -1,9 +1,9 @@
 import { getTranslations } from 'next-intl/server';
-import HomeClient from './HomeClient';
+import JsonFormatterClient from './JsonFormatterClient';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params;
-    const t = await getTranslations({ locale, namespace: 'Metadata.Index' });
+    const t = await getTranslations({ locale, namespace: 'Metadata.JsonFormatter' });
 
     return {
         title: t('title'),
@@ -11,6 +11,6 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     };
 }
 
-export default function Home() {
-    return <HomeClient />;
+export default function JsonFormatterPage() {
+    return <JsonFormatterClient />;
 }

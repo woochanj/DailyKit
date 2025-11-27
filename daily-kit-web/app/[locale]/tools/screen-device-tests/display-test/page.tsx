@@ -1,9 +1,9 @@
 import { getTranslations } from 'next-intl/server';
-import HomeClient from './HomeClient';
+import DisplayTestClient from './DisplayTestClient';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params;
-    const t = await getTranslations({ locale, namespace: 'Metadata.Index' });
+    const t = await getTranslations({ locale, namespace: 'Metadata.DisplayTest' });
 
     return {
         title: t('title'),
@@ -11,6 +11,6 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     };
 }
 
-export default function Home() {
-    return <HomeClient />;
+export default function DisplayTestPage() {
+    return <DisplayTestClient />;
 }
