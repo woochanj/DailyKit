@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Monitor, Grid3x3 } from "lucide-react";
 import { useTranslations } from 'next-intl';
 
@@ -48,10 +48,16 @@ export default function DisplayTestClient() {
         exitFullscreen();
     };
 
+    const containerRef = useRef<HTMLDivElement>(null);
+
     const enterFullscreen = () => {
-        const elem = document.documentElement;
+        const elem = containerRef.current;
+        if (!elem) return;
+
         if (elem.requestFullscreen) {
-            elem.requestFullscreen();
+            elem.requestFullscreen().catch((err: any) => {
+                console.error(`Error attempting to enable fullscreen: ${err.message} (${err.name})`);
+            });
         } else if ((elem as any).webkitRequestFullscreen) {
             (elem as any).webkitRequestFullscreen();
         }
@@ -59,7 +65,9 @@ export default function DisplayTestClient() {
 
     const exitFullscreen = () => {
         if (document.fullscreenElement && document.exitFullscreen) {
-            document.exitFullscreen();
+            document.exitFullscreen().catch((err: any) => {
+                console.error(`Error attempting to exit fullscreen: ${err.message} (${err.name})`);
+            });
         }
     };
 
@@ -124,7 +132,7 @@ export default function DisplayTestClient() {
     }, [testMode, colorIndex]); // Added colorIndex dependency
 
     return (
-        <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+        <div ref={containerRef} className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
             {/* Main Content */}
             {testMode === "idle" && (
                 <div className="main-wrapper">

@@ -15,13 +15,13 @@ export default function DeveloperToolsClient() {
             </div>
 
             <div className="flex flex-wrap justify-center gap-6 w-full max-w-5xl">
-                <BentoCard
+                {/* <BentoCard
                     title={t('displayTestTitle')}
                     description={t('displayTestDesc')}
                     icon={<FileJson size={28} />}
                     className="w-full md:w-[300px] h-[240px]"
                     href="/tools/developer/display-test"
-                />
+                /> */}
                 <BentoCard
                     title={t('jsonFormatterTitle')}
                     description={t('jsonFormatterDesc')}
