@@ -11,6 +11,8 @@
     "screenDeviceTestsDesc": "화면과 기기를 테스트하세요.",
     "healthLifeTitle": "Health & Life",
     "healthLifeDesc": "건강 및 일상 생활을 위한 계산기.",
+    "blogTitle": "블로그",
+    "blogDesc": "기술 팁 및 수리 가이드.",
     "popularToolsTitle": "가장 인기 있는 도구"
   },
   "DisplayTest": {
@@ -62,6 +64,26 @@
     "BmiCalculator": {
       "title": "BMI 계산기 - 비만도 측정 | DailyKit",
       "description": "간편하게 체질량지수(BMI)를 계산하고 건강 상태를 확인하세요."
+    }
+  },
+  "Blog": {
+    "title": "DailyKit 블로그",
+    "description": "기술 팁 및 수리 가이드."
+  },
+  "Tools": {
+    "ScreenDevice": {
+      "Keyboard": {
+        "title": "키보드 테스트",
+        "description": "고스팅 현상 확인"
+      },
+      "Mouse": {
+        "title": "마우스 테스트",
+        "description": "더블 클릭 현상 확인"
+      },
+      "Gamepad": {
+        "title": "게임패드 테스트",
+        "description": "조이스틱 점검"
+      }
     }
   }
 }

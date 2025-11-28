@@ -1,0 +1,89 @@
+{
+    "Index": {
+        "greeting": "你好，世界！",
+        "displayTestTitle": "显示测试",
+        "displayTestDesc": "测试坏点、颜色和亮度等。",
+        "jsonFormatterTitle": "JSON 格式化程序",
+        "jsonFormatterDesc": "验证 JSON 数据。",
+        "devDataTitle": "开发与数据",
+        "devDataDesc": "开发人员和数据处理工具。",
+        "screenDeviceTestsTitle": "屏幕与设备测试",
+        "screenDeviceTestsDesc": "测试您的屏幕和设备。",
+        "healthLifeTitle": "健康与生活",
+        "healthLifeDesc": "健康和日常生活计算器。",
+        "blogTitle": "博客",
+        "blogDesc": "技术提示和维修指南。",
+        "popularToolsTitle": "最受欢迎的工具"
+    },
+    "DisplayTest": {
+        "title": "显示测试",
+        "description": "检查屏幕是否有坏点和背光漏光。\n测试显示器的对比度和色彩准确性。",
+        "deadPixelTitle": "坏点测试",
+        "deadPixelDesc": "循环显示纯色",
+        "contrastTitle": "对比度测试",
+        "contrastDesc": "灰度渐变级别",
+        "instruction": "💡 测试进入全屏模式。单击或按空格键循环切换颜色。",
+        "whyTestTitle": "为什么要测试您的显示器？",
+        "whyTestDesc": "无论您是刚买了新显示器、笔记本电脑还是智能手机，还是正在排除旧设备的故障，验证屏幕的健康状况都至关重要。坏点或背光漏光等制造缺陷会影响您的观看体验。我们的<b>显示测试</b>工具可帮助您直接从浏览器快速轻松地识别这些问题，无需安装软件。",
+        "deadVsStuckTitle": "坏点与卡点",
+        "deadVsStuckDesc": "<b>坏点</b>是不发光的像素，在明亮的背景上显示为黑点。它们通常是永久性的硬件故障。\n\n<b>卡点</b>是冻结在特定颜色（红、绿或蓝）的像素。与坏点不同，卡点有时可以通过在该区域快速闪烁颜色来修复，这会迫使液晶重置。",
+        "backlightTitle": "背光漏光",
+        "backlightDesc": "当显示器背光的光线从屏幕边缘泄漏时，就会发生背光漏光。在昏暗的房间里观看黑暗场景时最为明显。使用我们的<b>黑屏测试</b>（循环中的第一种颜色）检查显示器边框沿线的亮度是否不均匀。",
+        "howToUseTitle": "如何使用此工具",
+        "howToDeadPixel": "<b>坏点测试：</b> 循环显示纯原色（红、绿、蓝、白、黑）。寻找与背景颜色不匹配的任何微小点。",
+        "howToContrast": "<b>对比度测试：</b> 显示灰度渐变。好的显示器应该允许您区分渐变的每一步，尤其是在最暗和最亮的一端。",
+        "howToFullscreen": "<b>全屏模式：</b> 为了获得最准确的结果，测试会自动进入全屏模式以消除浏览器的干扰。",
+        "clickToContinue": "单击或按空格键继续 • 按 ESC 退出",
+        "clickToExit": "单击或按 ESC 退出"
+    },
+    "Metadata": {
+        "DisplayTest": {
+            "title": "免费在线显示测试 - 检查坏点 | DailyKit",
+            "description": "使用我们的免费在线测试工具轻松检查显示器的坏点、背光漏光和屏幕均匀性。"
+        },
+        "Index": {
+            "title": "DailyKit - 您的日常开发人员和健康工具",
+            "description": "面向开发人员和日常生活的有用工具集。包括显示测试、JSON 格式化程序、BMI 计算器等。"
+        },
+        "DevData": {
+            "title": "开发与数据工具 | DailyKit",
+            "description": "开发人员和数据处理的基本工具。"
+        },
+        "ScreenDeviceTests": {
+            "title": "屏幕与设备测试 | DailyKit",
+            "description": "在线测试您的屏幕、显示器和设备。"
+        },
+        "Health": {
+            "title": "健康与生活工具 | DailyKit",
+            "description": "用于您的健康和日常生活的计算器和工具，包括 BMI 计算器。"
+        },
+        "JsonFormatter": {
+            "title": "JSON 格式化程序和验证器 | DailyKit",
+            "description": "免费在线验证、格式化和美化您的 JSON 数据。"
+        },
+        "BmiCalculator": {
+            "title": "BMI 计算器 - 检查您的身体质量指数 | DailyKit",
+            "description": "轻松计算您的身体质量指数 (BMI) 并检查您的健康状况。"
+        }
+    },
+    "Blog": {
+        "title": "DailyKit 博客",
+        "description": "技术提示和维修指南。"
+    },
+    "Tools": {
+        "ScreenDevice": {
+            "Keyboard": {
+                "title": "键盘测试",
+                "description": "检查重影"
+            },
+            "Mouse": {
+                "title": "鼠标测试",
+                "description": "检查双击"
+            },
+            "Gamepad": {
+                "title": "手柄测试",
+                "description": "检查操纵杆"
+            }
+        }
+    }
+}

@@ -1,0 +1,89 @@
+{
+    "Index": {
+        "greeting": "Bonjour le monde !",
+        "displayTestTitle": "Test d'Affichage",
+        "displayTestDesc": "Testez les pixels morts, la couleur et la luminosité, etc.",
+        "jsonFormatterTitle": "Formateur JSON",
+        "jsonFormatterDesc": "Valider les données JSON.",
+        "devDataTitle": "Dév & Données",
+        "devDataDesc": "Outils pour les développeurs et le traitement des données.",
+        "screenDeviceTestsTitle": "Tests d'Écran et d'Appareils",
+        "screenDeviceTestsDesc": "Testez votre écran et vos appareils.",
+        "healthLifeTitle": "Santé et Vie",
+        "healthLifeDesc": "Calculatrices pour la santé et la vie quotidienne.",
+        "blogTitle": "Blog",
+        "blogDesc": "Conseils techniques et guides de réparation.",
+        "popularToolsTitle": "Outils les Plus Populaires"
+    },
+    "DisplayTest": {
+        "title": "Test d'Affichage",
+        "description": "Vérifiez les pixels morts et les fuites de lumière sur votre écran.\nTestez le contraste et la précision des couleurs de votre moniteur.",
+        "deadPixelTitle": "Test de Pixels Morts",
+        "deadPixelDesc": "Cycle à travers des couleurs unies",
+        "contrastTitle": "Test de Contraste",
+        "contrastDesc": "Niveaux de dégradé de gris",
+        "instruction": "💡 Les tests passent en mode plein écran. Cliquez ou appuyez sur Espace pour changer de couleur.",
+        "whyTestTitle": "Pourquoi tester votre écran ?",
+        "whyTestDesc": "Que vous veniez d'acheter un nouveau moniteur, ordinateur portable ou smartphone, ou que vous dépanniez un ancien, vérifier la santé de votre écran est crucial. Les défauts de fabrication comme les pixels morts ou les fuites de lumière peuvent affecter votre expérience visuelle. Notre outil de <b>Test d'Affichage</b> vous aide à identifier ces problèmes rapidement et facilement directement depuis votre navigateur, sans installation de logiciel.",
+        "deadVsStuckTitle": "Pixels Morts vs Bloqués",
+        "deadVsStuckDesc": "<b>Les Pixels Morts</b> sont des pixels qui ne s'allument pas, apparaissant comme des points noirs sur un fond clair. Ce sont généralement des défauts matériels permanents.\n\n<b>Les Pixels Bloqués</b> sont des pixels figés dans une couleur spécifique (Rouge, Vert ou Bleu). Contrairement aux pixels morts, les pixels bloqués peuvent parfois être réparés en faisant clignoter rapidement des couleurs sur la zone, ce qui force le cristal liquide à se réinitialiser.",
+        "backlightTitle": "Fuite de Lumière",
+        "backlightDesc": "La fuite de lumière se produit lorsque la lumière du rétroéclairage du moniteur s'échappe autour des bords de l'écran. Elle est plus visible lors du visionnage de scènes sombres dans une pièce peu éclairée. Utilisez notre <b>Test d'Écran Noir</b> (la première couleur du cycle) pour vérifier une luminosité inégale le long des cadres de votre écran.",
+        "howToUseTitle": "Comment utiliser cet outil",
+        "howToDeadPixel": "<b>Test de Pixels Morts :</b> Cycle à travers les couleurs primaires unies (Rouge, Vert, Bleu, Blanc, Noir). Recherchez de minuscules points qui ne correspondent pas à la couleur de fond.",
+        "howToContrast": "<b>Test de Contraste :</b> Affiche un dégradé de gris. Un bon moniteur devrait vous permettre de distinguer chaque étape du dégradé, en particulier aux extrémités les plus sombres et les plus claires.",
+        "howToFullscreen": "<b>Mode Plein Écran :</b> Pour des résultats plus précis, les tests passent automatiquement en mode plein écran pour éliminer les distractions du navigateur.",
+        "clickToContinue": "Cliquez ou appuyez sur Espace pour continuer • Échap pour quitter",
+        "clickToExit": "Cliquez ou appuyez sur Échap pour quitter"
+    },
+    "Metadata": {
+        "DisplayTest": {
+            "title": "Test d'Affichage en Ligne Gratuit - Vérifier les Pixels Morts | DailyKit",
+            "description": "Vérifiez facilement votre moniteur pour les pixels morts, les fuites de lumière et l'uniformité de l'écran avec notre outil de test en ligne gratuit."
+        },
+        "Index": {
+            "title": "DailyKit - Vos Outils Quotidiens de Développement et de Santé",
+            "description": "Une collection d'outils utiles pour les développeurs et la vie quotidienne. Comprend le Test d'Affichage, le Formateur JSON, le Calculateur d'IMC et plus encore."
+        },
+        "DevData": {
+            "title": "Outils de Dév & Données | DailyKit",
+            "description": "Outils essentiels pour les développeurs et le traitement des données."
+        },
+        "ScreenDeviceTests": {
+            "title": "Tests d'Écran et d'Appareils | DailyKit",
+            "description": "Testez votre écran, moniteur et appareils en ligne."
+        },
+        "Health": {
+            "title": "Outils de Santé et Vie | DailyKit",
+            "description": "Calculatrices et outils pour votre santé et votre vie quotidienne, y compris le Calculateur d'IMC."
+        },
+        "JsonFormatter": {
+            "title": "Formateur et Validateur JSON | DailyKit",
+            "description": "Validez, formatez et embellissez vos données JSON en ligne gratuitement."
+        },
+        "BmiCalculator": {
+            "title": "Calculateur d'IMC - Vérifiez votre Indice de Masse Corporelle | DailyKit",
+            "description": "Calculez votre Indice de Masse Corporelle (IMC) facilement et vérifiez votre état de santé."
+        }
+    },
+    "Blog": {
+        "title": "Blog DailyKit",
+        "description": "Conseils techniques et guides de réparation."
+    },
+    "Tools": {
+        "ScreenDevice": {
+            "Keyboard": {
+                "title": "Test de Clavier",
+                "description": "Vérifier le ghosting"
+            },
+            "Mouse": {
+                "title": "Test de Souris",
+                "description": "Vérifier le double clic"
+            },
+            "Gamepad": {
+                "title": "Test de Manette",
+                "description": "Vérifier le joystick"
+            }
+        }
+    }
+}

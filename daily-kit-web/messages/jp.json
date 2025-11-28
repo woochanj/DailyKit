@@ -1,0 +1,89 @@
+{
+    "Index": {
+        "greeting": "こんにちは、世界！",
+        "displayTestTitle": "ディスプレイテスト",
+        "displayTestDesc": "ドット抜け、色、明るさなどをテストします。",
+        "jsonFormatterTitle": "JSONフォーマッター",
+        "jsonFormatterDesc": "JSONデータを検証します。",
+        "devDataTitle": "開発＆データ",
+        "devDataDesc": "開発者およびデータ処理のためのツール。",
+        "screenDeviceTestsTitle": "画面＆デバイス・テスト",
+        "screenDeviceTestsDesc": "画面とデバイスをテストします。",
+        "healthLifeTitle": "健康＆生活",
+        "healthLifeDesc": "健康と日常生活のための計算機。",
+        "blogTitle": "ブログ",
+        "blogDesc": "技術的なヒントと修理ガイド。",
+        "popularToolsTitle": "最も人気のあるツール"
+    },
+    "DisplayTest": {
+        "title": "ディスプレイテスト",
+        "description": "画面のドット抜けやバックライト漏れを確認します。\nモニターのコントラストと色の精度をテストします。",
+        "deadPixelTitle": "ドット抜けテスト",
+        "deadPixelDesc": "単色を切り替える",
+        "contrastTitle": "コントラストテスト",
+        "contrastDesc": "グレースケールのグラデーションレベル",
+        "instruction": "💡 テストは全画面モードになります。クリックまたはスペースキーを押して色を切り替えます。",
+        "whyTestTitle": "なぜディスプレイをテストするのですか？",
+        "whyTestDesc": "新しいモニター、ラップトップ、スマートフォンを購入したばかりの場合でも、古いものをトラブルシューティングしている場合でも、画面の状態を確認することは重要です。ドット抜けやバックライト漏れなどの製造上の欠陥は、視聴体験に影響を与える可能性があります。当社の<b>ディスプレイテスト</b>ツールを使用すると、ソフトウェアのインストールなしで、ブラウザから直接これらの問題をすばやく簡単に特定できます。",
+        "deadVsStuckTitle": "ドット抜け vs スタックピクセル",
+        "deadVsStuckDesc": "<b>ドット抜け（デッドピクセル）</b>は、点灯しないピクセルで、明るい背景に黒い点として表示されます。これらは通常、永続的なハードウェア障害です。\n\n<b>スタックピクセル</b>は、特定の色（赤、緑、または青）で固定されたピクセルです。ドット抜けとは異なり、スタックピクセルは、その領域で色を急速に点滅させることで修正できる場合があります。これにより、液晶がリセットされます。",
+        "backlightTitle": "バックライト漏れ",
+        "backlightDesc": "バックライト漏れは、モニターのバックライトからの光が画面の端から漏れるときに発生します。薄暗い部屋で暗いシーンを見るときに最も目立ちます。当社の<b>ブラックスクリーンテスト</b>（サイクルの最初の色）を使用して、ディスプレイのベゼルに沿った明るさのムラを確認してください。",
+        "howToUseTitle": "このツールの使用方法",
+        "howToDeadPixel": "<b>ドット抜けテスト：</b> 単色の原色（赤、緑、青、白、黒）を切り替えます。背景色と一致しない小さな点を探してください。",
+        "howToContrast": "<b>コントラストテスト：</b> グレースケールのグラデーションを表示します。優れたモニターでは、特に最も暗い端と最も明るい端で、グラデーションの各ステップを区別できるはずです。",
+        "howToFullscreen": "<b>全画面モード：</b> 最も正確な結果を得るために、テストは自動的に全画面モードになり、ブラウザの気を散らす要素を排除します。",
+        "clickToContinue": "クリックまたはスペースキーで続行 • ESCで終了",
+        "clickToExit": "クリックまたはESCキーで終了"
+    },
+    "Metadata": {
+        "DisplayTest": {
+            "title": "無料オンラインディスプレイテスト - ドット抜けチェック | DailyKit",
+            "description": "無料のオンラインテストツールを使用して、モニターのドット抜け、バックライト漏れ、画面の均一性を簡単に確認できます。"
+        },
+        "Index": {
+            "title": "DailyKit - あなたの毎日の開発者＆健康ツール",
+            "description": "開発者や日常生活に役立つツールのコレクション。ディスプレイテスト、JSONフォーマッター、BMI計算機などが含まれています。"
+        },
+        "DevData": {
+            "title": "開発＆データツール | DailyKit",
+            "description": "開発者とデータ処理に不可欠なツール。"
+        },
+        "ScreenDeviceTests": {
+            "title": "画面＆デバイステスト | DailyKit",
+            "description": "オンラインで画面、モニター、デバイスをテストします。"
+        },
+        "Health": {
+            "title": "健康＆生活ツール | DailyKit",
+            "description": "BMI計算機を含む、健康と日常生活のための計算機とツール。"
+        },
+        "JsonFormatter": {
+            "title": "JSONフォーマッター＆バリデーター | DailyKit",
+            "description": "オンラインで無料でJSONデータを検証、整形、美化します。"
+        },
+        "BmiCalculator": {
+            "title": "BMI計算機 - ボディマス指数をチェック | DailyKit",
+            "description": "ボディマス指数（BMI）を簡単に計算し、健康状態を確認します。"
+        }
+    },
+    "Blog": {
+        "title": "DailyKitブログ",
+        "description": "技術的なヒントと修理ガイド。"
+    },
+    "Tools": {
+        "ScreenDevice": {
+            "Keyboard": {
+                "title": "キーボードテスト",
+                "description": "ゴーストの確認"
+            },
+            "Mouse": {
+                "title": "マウステスト",
+                "description": "ダブルクリックの確認"
+            },
+            "Gamepad": {
+                "title": "ゲームパッドテスト",
+                "description": "ジョイスティックの確認"
+            }
+        }
+    }
+}

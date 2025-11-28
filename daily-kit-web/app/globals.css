@@ -109,6 +109,10 @@
   }
 }
 
+html {
+  scrollbar-gutter: stable;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -160,7 +164,7 @@ p.subtitle {
   }
 }
 
-/* Header Styles */
+/* Header Styles - Wireframe Bento */
 .header {
   position: fixed;
   top: 0;
@@ -169,11 +173,13 @@ p.subtitle {
   height: var(--header-height);
   display: flex;
   align-items: center;
-  /* justify-content: space-between; Removed to allow inner container to center */
   padding: 0 40px;
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  background: rgba(255, 255, 255, 0.7);
+  /* More transparent */
+  backdrop-filter: blur(20px);
+  /* Stronger blur */
+  border-bottom: 1px solid var(--border);
+  /* Consistent thin border */
   z-index: 1000;
   transition: transform 0.3s ease;
 }
@@ -200,35 +206,43 @@ p.subtitle {
 }
 
 .logo:hover {
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
 .nav-menu {
   display: flex;
-  gap: 30px;
+  gap: 32px;
+  align-items: center;
+  /* Increased gap */
 }
 
 .nav-item {
   text-decoration: none;
   color: var(--text-main);
-  font-size: 16px;
+  font-size: 14px;
+  /* Smaller font */
   font-weight: 500;
+  text-transform: uppercase;
+  /* Uppercase for tech vibe */
+  letter-spacing: 0.05em;
   transition: color 0.2s;
   position: relative;
 }
 
 .nav-item:hover {
-  color: var(--primary);
+  opacity: 0.7;
 }
 
 .nav-item.active::after {
   content: '';
   position: absolute;
-  bottom: -8px;
+  bottom: -4px;
+  /* Closer underline */
   left: 0;
   right: 0;
   height: 2px;
-  background: var(--primary);
+  /* Slightly thicker for visibility */
+  background: var(--foreground);
 }
 
 @media (max-width: 768px) {
@@ -237,26 +251,30 @@ p.subtitle {
   }
 
   .nav-menu {
-    gap: 15px;
+    gap: 20px;
   }
 
   .nav-item {
-    font-size: 14px;
+    font-size: 13px;
   }
 }
 
 @media (prefers-color-scheme: dark) {
   .header {
-    background: rgba(29, 29, 31, 0.8);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.7);
+    /* Dark mode transparent */
+    border-bottom: 1px solid var(--border);
   }
 }
 
-/* Footer Styles */
+/* Footer Styles - Wireframe Bento */
 .footer-wrapper {
-  background-color: var(--bg-ad);
+  background-color: transparent;
+  /* Transparent background */
   border-top: 1px solid var(--border);
-  padding: 60px 20px 40px;
+  /* Thin border */
+  padding: 80px 20px 40px;
+  /* More top padding */
   margin-top: auto;
 }
 
@@ -272,14 +290,17 @@ p.subtitle {
 
 .footer-section {
   max-width: 500px;
-  margin-bottom: 40px;
+  margin-bottom: 48px;
 }
 
 .footer-heading {
-  font-size: 18px;
+  font-size: 16px;
+  /* Smaller heading */
   font-weight: 600;
   color: var(--foreground);
-  margin: 0 0 12px 0;
+  margin: 0 0 16px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .footer-description {
@@ -292,11 +313,12 @@ p.subtitle {
 .footer-links {
   list-style: none;
   padding: 0;
-  margin: 0 0 40px 0;
+  margin: 0 0 48px 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 24px;
+  gap: 32px;
+  /* Increased gap */
 }
 
 .footer-links a {
@@ -307,39 +329,162 @@ p.subtitle {
 }
 
 .footer-links a:hover {
-  color: var(--primary);
+  color: var(--foreground);
+  /* High contrast on hover */
 }
 
 .footer-divider {
-  width: 100%;
-  height: 1px;
-  background-color: var(--border);
-  margin: 0 0 24px 0;
-  opacity: 0.5;
+  display: none;
+  /* Remove divider for cleaner look */
 }
 
 .footer-copyright {
   text-align: center;
-  font-size: 13px;
+  font-size: 12px;
   color: var(--text-sub);
+  opacity: 0.6;
 }
 
 @media (max-width: 768px) {
   .footer-wrapper {
-    padding: 40px 20px 30px;
+    padding: 60px 20px 30px;
   }
 
   .footer-links {
-    gap: 16px;
+    gap: 20px;
     flex-direction: column;
   }
+}
 
-  .footer-heading {
-    font-size: 16px;
-  }
+/* =========================================
+ DailyKit Extension: Layout Systems
+ ========================================= */
 
-  .footer-description,
-  .footer-links a {
-    font-size: 13px;
+/* 1. Home Style: Wireframe Bento (Ultra-Minimalism) */
+.bento-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  /* Increased gap for airy feel */
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .bento-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(180px, auto);
   }
+}
+
+.bento-card {
+  background-color: transparent;
+  /* Transparent or var(--background) */
+  border: 1px solid var(--border);
+  /* Light: #e5e5e5, Dark: #333 handled by var */
+  border-radius: 1.5rem;
+  /* Very rounded */
+  padding: 24px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* Center align content */
+  align-items: center;
+  /* Center align content */
+  text-align: center;
+  /* Center text */
+  overflow: hidden;
+  position: relative;
+  box-shadow: none !important;
+  /* CRITICAL: Remove all box-shadows */
+  height: 100%;
+  /* Ensure card fills the grid cell */
+}
+
+.bento-card:hover {
+  transform: none;
+  /* Do NOT translate/lift */
+  border-color: var(--foreground);
+  /* Black/White on hover */
+  background-color: rgba(0, 0, 0, 0.02);
+  /* Subtle background tint */
+}
+
+.bento-card h3 {
+  font-size: 1.25rem;
+  /* Smaller, sophisticated look */
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.bento-card p {
+  font-size: 0.875rem;
+  color: var(--text-sub);
+}
+
+/* Bento Spans */
+.col-span-2 {
+  grid-column: span 2;
+}
+
+.row-span-2 {
+  grid-row: span 2;
+}
+
+
+/* 2. Category Style: Tech Dashboard (Control Panel) */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  /* Bento보다 좁은 간격 */
+  width: 100%;
+}
+
+.tech-card {
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: calc(var(--radius) - 8px);
+  /* Bento보다 조금 더 각지게 (전문적인 느낌) */
+  padding: 20px;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  /* 아이콘-제목-상태 순 */
+  gap: 12px;
+  cursor: pointer;
+}
+
+/* Tech Vibe: Hover Glow Effect */
+.tech-card:hover {
+  border-color: var(--text-sub);
+  /* 살짝 진해지는 테두리 */
+  background-color: var(--secondary);
+  /* 아주 미세한 배경 변화 */
+}
+
+/* Status Indicator (초록불) */
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--reaction-go);
+  /* 기존에 정의된 라임 그린색 활용 */
+  box-shadow: 0 0 8px var(--reaction-go);
+  /* 네온 효과 */
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.status-text {
+  font-size: 12px;
+  color: var(--text-sub);
+  font-family: var(--font-mono);
+  /* 고정폭 글꼴로 기계적인 느낌 */
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
 }

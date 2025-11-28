@@ -20,20 +20,20 @@ export default function BentoCard({
 }: BentoCardProps) {
     const Content = (
         <div
-            className={`h-full group relative flex flex-col justify-between overflow-hidden rounded-[2rem] bg-white p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border border-gray-100 ${className}`}
+            className={`bento-card ${className}`}
         >
-            <div className="z-10 flex flex-col gap-3">
+            <div className="z-10 flex flex-col gap-3 items-center w-full h-full justify-center">
                 {icon && (
-                    <div className="mb-2 w-fit rounded-full bg-blue-50 p-3 text-blue-600 transition-colors group-hover:bg-blue-600 group-hover:text-white">
+                    <div className="mb-4 text-gray-900 dark:text-gray-100">
                         {icon}
                     </div>
                 )}
-                <h3 className="font-semibold text-2xl tracking-tight text-gray-900">
+                <h3 className="text-gray-900 dark:text-gray-100">
                     {title}
                 </h3>
-                <p className="text-base text-gray-500 leading-relaxed">{description}</p>
+                <p>{description}</p>
             </div>
-            {children && <div className="mt-6">{children}</div>}
+            {children && <div className="mt-6 w-full">{children}</div>}
         </div>
     );
 

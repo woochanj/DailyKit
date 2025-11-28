@@ -11,6 +11,8 @@
     "screenDeviceTestsDesc": "Test your screen and devices.",
     "healthLifeTitle": "Health & Life",
     "healthLifeDesc": "Calculators for health and daily life.",
+    "blogTitle": "Blog",
+    "blogDesc": "Tech tips and repair guides.",
     "popularToolsTitle": "Most Popular Tools"
   },
   "DisplayTest": {
@@ -62,6 +64,26 @@
     "BmiCalculator": {
       "title": "BMI Calculator - Check Your Body Mass Index | DailyKit",
       "description": "Calculate your Body Mass Index (BMI) easily and check your health status."
+    }
+  },
+  "Blog": {
+    "title": "DailyKit Blog",
+    "description": "Tech tips and repair guides."
+  },
+  "Tools": {
+    "ScreenDevice": {
+      "Keyboard": {
+        "title": "Keyboard Test",
+        "description": "Check ghosting"
+      },
+      "Mouse": {
+        "title": "Mouse Test",
+        "description": "Check double click"
+      },
+      "Gamepad": {
+        "title": "Gamepad Test",
+        "description": "Check joystick"
+      }
     }
   }
 }

@@ -1,0 +1,89 @@
+{
+    "Index": {
+        "greeting": "¡Hola Mundo!",
+        "displayTestTitle": "Prueba de Pantalla",
+        "displayTestDesc": "Prueba de píxeles muertos, color y brillo, etc.",
+        "jsonFormatterTitle": "Formateador JSON",
+        "jsonFormatterDesc": "Validar datos JSON.",
+        "devDataTitle": "Desarrollo y Datos",
+        "devDataDesc": "Herramientas para desarrolladores y procesamiento de datos.",
+        "screenDeviceTestsTitle": "Pruebas de Pantalla y Dispositivos",
+        "screenDeviceTestsDesc": "Prueba tu pantalla y dispositivos.",
+        "healthLifeTitle": "Salud y Vida",
+        "healthLifeDesc": "Calculadoras para la salud y la vida diaria.",
+        "blogTitle": "Blog",
+        "blogDesc": "Consejos técnicos y guías de reparación.",
+        "popularToolsTitle": "Herramientas Más Populares"
+    },
+    "DisplayTest": {
+        "title": "Prueba de Pantalla",
+        "description": "Comprueba si hay píxeles muertos y fugas de luz en tu pantalla.\nPrueba el contraste y la precisión del color de tu monitor.",
+        "deadPixelTitle": "Prueba de Píxeles Muertos",
+        "deadPixelDesc": "Ciclo a través de colores sólidos",
+        "contrastTitle": "Prueba de Contraste",
+        "contrastDesc": "Niveles de degradado de grises",
+        "instruction": "💡 Las pruebas entran en modo pantalla completa. Haz clic o presiona Espacio para cambiar de color.",
+        "whyTestTitle": "¿Por qué probar tu pantalla?",
+        "whyTestDesc": "Ya sea que acabes de comprar un monitor, portátil o teléfono nuevo, o estés solucionando problemas en uno antiguo, verificar la salud de tu pantalla es crucial. Los defectos de fabricación como píxeles muertos o fugas de luz pueden afectar tu experiencia visual. Nuestra herramienta de <b>Prueba de Pantalla</b> te ayuda a identificar estos problemas rápida y fácilmente directamente desde tu navegador, sin necesidad de instalar software.",
+        "deadVsStuckTitle": "Píxeles Muertos vs. Atascados",
+        "deadVsStuckDesc": "<b>Píxeles Muertos</b> son píxeles que no se iluminan, apareciendo como puntos negros en un fondo brillante. Generalmente son fallos de hardware permanentes.\n\n<b>Píxeles Atascados</b> son píxeles congelados en un color específico (Rojo, Verde o Azul). A diferencia de los píxeles muertos, los píxeles atascados a veces se pueden arreglar cambiando rápidamente los colores sobre el área, lo que obliga al cristal líquido a reiniciarse.",
+        "backlightTitle": "Fuga de Luz de Fondo",
+        "backlightDesc": "La fuga de luz de fondo ocurre cuando la luz de la luz de fondo del monitor se filtra alrededor de los bordes de la pantalla. Es más visible cuando se ven escenas oscuras en una habitación con poca luz. Usa nuestra <b>Prueba de Pantalla Negra</b> (el primer color en el ciclo) para verificar si hay brillo desigual a lo largo de los biseles de tu pantalla.",
+        "howToUseTitle": "Cómo usar esta herramienta",
+        "howToDeadPixel": "<b>Prueba de Píxeles Muertos:</b> Cicla a través de colores primarios sólidos (Rojo, Verde, Azul, Blanco, Negro). Busca puntos diminutos que no coincidan con el color de fondo.",
+        "howToContrast": "<b>Prueba de Contraste:</b> Muestra un degradado de grises. Un buen monitor debería permitirte distinguir entre cada paso del degradado, especialmente en los extremos más oscuros y más claros.",
+        "howToFullscreen": "<b>Modo Pantalla Completa:</b> Para obtener los resultados más precisos, las pruebas entran automáticamente en modo pantalla completa para eliminar las distracciones del navegador.",
+        "clickToContinue": "Haz clic o presiona Espacio para continuar • ESC para salir",
+        "clickToExit": "Haz clic o presiona ESC para salir"
+    },
+    "Metadata": {
+        "DisplayTest": {
+            "title": "Prueba de Pantalla en Línea Gratis - Verificar Píxeles Muertos | DailyKit",
+            "description": "Verifica fácilmente tu monitor en busca de píxeles muertos, fugas de luz y uniformidad de pantalla con nuestra herramienta de prueba en línea gratuita."
+        },
+        "Index": {
+            "title": "DailyKit - Tus Herramientas Diarias de Desarrollo y Salud",
+            "description": "Una colección de herramientas útiles para desarrolladores y la vida diaria. Incluye Prueba de Pantalla, Formateador JSON, Calculadora de IMC y más."
+        },
+        "DevData": {
+            "title": "Herramientas de Desarrollo y Datos | DailyKit",
+            "description": "Herramientas esenciales para desarrolladores y procesamiento de datos."
+        },
+        "ScreenDeviceTests": {
+            "title": "Pruebas de Pantalla y Dispositivos | DailyKit",
+            "description": "Prueba tu pantalla, monitor y dispositivos en línea."
+        },
+        "Health": {
+            "title": "Herramientas de Salud y Vida | DailyKit",
+            "description": "Calculadoras y herramientas para tu salud y vida diaria, incluida la Calculadora de IMC."
+        },
+        "JsonFormatter": {
+            "title": "Formateador y Validador JSON | DailyKit",
+            "description": "Valida, formatea y embellece tus datos JSON en línea gratis."
+        },
+        "BmiCalculator": {
+            "title": "Calculadora de IMC - Verifica tu Índice de Masa Corporal | DailyKit",
+            "description": "Calcula tu Índice de Masa Corporal (IMC) fácilmente y verifica tu estado de salud."
+        }
+    },
+    "Blog": {
+        "title": "Blog de DailyKit",
+        "description": "Consejos técnicos y guías de reparación."
+    },
+    "Tools": {
+        "ScreenDevice": {
+            "Keyboard": {
+                "title": "Prueba de Teclado",
+                "description": "Verificar ghosting"
+            },
+            "Mouse": {
+                "title": "Prueba de Ratón",
+                "description": "Verificar doble clic"
+            },
+            "Gamepad": {
+                "title": "Prueba de Gamepad",
+                "description": "Verificar joystick"
+            }
+        }
+    }
+}

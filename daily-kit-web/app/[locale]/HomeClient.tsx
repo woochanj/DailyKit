@@ -5,7 +5,8 @@ import AdUnit from "@/components/AdUnit";
 import {
     Timer,
     FileJson,
-    Monitor
+    Monitor,
+    BookOpen
 } from "lucide-react";
 import { useTranslations } from 'next-intl';
 
@@ -24,13 +25,12 @@ export default function HomeClient() {
             </div>
 
             {/* Category Cards */}
-            <div className="flex flex-wrap justify-center gap-6 w-full max-w-5xl mb-12">
+            <div className="bento-grid mb-12">
                 {/* Dev & Data */}
                 <BentoCard
                     title={t('devDataTitle')}
                     description={t('devDataDesc')}
-                    icon={<FileJson size={28} />}
-                    className="w-full md:w-[300px] h-[240px]"
+                    icon={<FileJson size={32} strokeWidth={1} />}
                     href="/tools/dev-data"
                 />
 
@@ -38,8 +38,8 @@ export default function HomeClient() {
                 <BentoCard
                     title={t('screenDeviceTestsTitle')}
                     description={t('screenDeviceTestsDesc')}
-                    icon={<Monitor size={28} />}
-                    className="w-full md:w-[300px] h-[240px]"
+                    icon={<Monitor size={64} strokeWidth={0.8} />}
+                    className="col-span-1 md:col-span-2 row-span-2"
                     href="/tools/screen-device-tests"
                 />
 
@@ -47,21 +47,28 @@ export default function HomeClient() {
                 <BentoCard
                     title={t('healthLifeTitle')}
                     description={t('healthLifeDesc')}
-                    icon={<Timer size={28} />} // Using Timer as placeholder icon for Health
-                    className="w-full md:w-[300px] h-[240px]"
+                    icon={<Timer size={32} strokeWidth={1} />} // Using Timer as placeholder icon for Health
                     href="/tools/health"
+                />
+
+                {/* Blog */}
+                <BentoCard
+                    title={t('blogTitle')}
+                    description={t('blogDesc')}
+                    icon={<BookOpen size={32} strokeWidth={1} />}
+                    href="/blog"
                 />
 
                 {/* AdSense Placeholder (Wide) */}
                 <AdUnit
                     slotId="1234567890"
-                    className="w-full md:w-[300px] h-[240px] !m-0 !max-w-none !bg-white !border !border-gray-100 !rounded-[2rem]"
+                    className="!m-0 !max-w-none !bg-transparent !border !border-gray-200 !rounded-[1.5rem] !shadow-none"
                     label="Sponsored"
                 />
             </div>
 
             {/* Most Popular Tools Section */}
-            <div className="w-full max-w-5xl text-left mb-8">
+            <div className="w-full max-w-5xl text-left mb-8 mt-20">
                 <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
                     🔥 {t('popularToolsTitle')}
                 </h2>
