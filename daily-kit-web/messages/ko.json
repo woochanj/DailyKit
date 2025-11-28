@@ -13,7 +13,8 @@
     "healthLifeDesc": "건강 및 일상 생활을 위한 계산기.",
     "blogTitle": "블로그",
     "blogDesc": "기술 팁 및 수리 가이드.",
-    "popularToolsTitle": "가장 인기 있는 도구"
+    "popularToolsTitle": "가장 인기 있는 도구",
+    "developerKitDesc": "개발자를 위한 필수 도구 모음입니다."
   },
   "DisplayTest": {
     "title": "디스플레이 테스트",

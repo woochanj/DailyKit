@@ -13,7 +13,8 @@
         "healthLifeDesc": "Calculatrices pour la santé et la vie quotidienne.",
         "blogTitle": "Blog",
         "blogDesc": "Conseils techniques et guides de réparation.",
-        "popularToolsTitle": "Outils les Plus Populaires"
+        "popularToolsTitle": "Outils les Plus Populaires",
+        "developerKitDesc": "Collection d'outils essentiels pour les développeurs."
     },
     "DisplayTest": {
         "title": "Test d'Affichage",

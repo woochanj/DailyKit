@@ -13,7 +13,8 @@
         "healthLifeDesc": "健康と日常生活のための計算機。",
         "blogTitle": "ブログ",
         "blogDesc": "技術的なヒントと修理ガイド。",
-        "popularToolsTitle": "最も人気のあるツール"
+        "popularToolsTitle": "最も人気のあるツール",
+        "developerKitDesc": "開発者のための必須ツールコレクション。"
     },
     "DisplayTest": {
         "title": "ディスプレイテスト",

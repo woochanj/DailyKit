@@ -13,7 +13,8 @@
     "healthLifeDesc": "Calculators for health and daily life.",
     "blogTitle": "Blog",
     "blogDesc": "Tech tips and repair guides.",
-    "popularToolsTitle": "Most Popular Tools"
+    "popularToolsTitle": "Most Popular Tools",
+    "developerKitDesc": "Collection of essential tools for developers."
   },
   "DisplayTest": {
     "title": "Display Test",
