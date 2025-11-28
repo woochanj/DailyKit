@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 import Script from "next/script";
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
@@ -49,7 +49,7 @@ export default async function LocaleLayout({
             >
                 <NextIntlClientProvider messages={messages}>
                     <Header />
-                    <main className="flex-1 w-full pt-[var(--header-height)]">
+                    <main className="flex-1 w-full pt-[calc(var(--header-height)+2rem)]">
                         {children}
                     </main>
                     <Footer />

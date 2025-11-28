@@ -1,7 +1,7 @@
 "use client";
 
-import BentoCard from "@/components/BentoCard";
-import AdUnit from "@/components/AdUnit";
+import BentoCard from "@/components/ui/BentoCard";
+import AdUnit from "@/components/ui/AdUnit";
 import {
     Timer,
     FileJson,
@@ -14,18 +14,18 @@ export default function HomeClient() {
     const t = useTranslations('Index');
 
     return (
-        <div className="main-wrapper">
+        <div className="w-full max-w-[1024px] px-5 py-10 text-center flex-1 flex flex-col items-center mx-auto">
             <div className="mb-16 text-center animate-[fadeIn_0.5s_ease-out]">
                 <h1 className="text-5xl font-bold tracking-tight text-gray-900 sm:text-6xl mb-4">
                     DailyKit
                 </h1>
-                <p className="subtitle max-w-2xl mx-auto">
+                <p className="text-[20px] text-[var(--text-sub)] font-normal mb-10 break-keep leading-relaxed max-w-2xl mx-auto">
                     {t('greeting')}
                 </p>
             </div>
 
             {/* Category Cards */}
-            <div className="bento-grid mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 w-full max-w-[1024px] mx-auto mb-12">
                 {/* Dev & Data */}
                 <BentoCard
                     title={t('devDataTitle')}
@@ -39,7 +39,7 @@ export default function HomeClient() {
                     title={t('screenDeviceTestsTitle')}
                     description={t('screenDeviceTestsDesc')}
                     icon={<Monitor size={64} strokeWidth={0.8} />}
-                    className="col-span-1 md:col-span-2 row-span-2"
+                    size="large"
                     href="/tools/screen-device-tests"
                 />
 

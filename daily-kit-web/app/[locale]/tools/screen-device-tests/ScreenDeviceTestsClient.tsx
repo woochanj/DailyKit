@@ -1,6 +1,6 @@
 "use client";
 
-import BentoCard from "@/components/BentoCard";
+import BentoCard from "@/components/ui/BentoCard";
 import { Monitor } from "lucide-react";
 import { useTranslations } from 'next-intl';
 
