@@ -1,5 +1,5 @@
 import { getTranslations } from 'next-intl/server';
-import KeyboardTestClient from './KeyboardTestClient';
+import KeyboardTestClient from '@/components/features/device/keyboard-test/KeyboardTestClient';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params;

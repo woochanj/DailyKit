@@ -1,5 +1,5 @@
 import { getTranslations } from 'next-intl/server';
-import MouseTestClient from './MouseTestClient';
+import MouseTestClient from '@/components/features/device/mouse-test/MouseTestClient';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params;

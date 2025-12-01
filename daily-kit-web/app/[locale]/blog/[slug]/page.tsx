@@ -1,5 +1,5 @@
 import { getTranslations } from 'next-intl/server';
-import BlogPostClient from './BlogPostClient';
+import BlogPostClient from '@/components/features/blog/BlogPostClient';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }) {
     const { locale, slug } = await params;

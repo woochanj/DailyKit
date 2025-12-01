@@ -1,5 +1,5 @@
 import { getTranslations } from 'next-intl/server';
-import GamepadTestClient from './GamepadTestClient';
+import GamepadTestClient from '@/components/features/device/gamepad-tester/GamepadTestClient';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params;

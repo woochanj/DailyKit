@@ -1,5 +1,5 @@
 import { getTranslations } from 'next-intl/server';
-import PrivacyClient from './PrivacyClient';
+import PrivacyClient from '@/components/features/privacy/PrivacyClient';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params;

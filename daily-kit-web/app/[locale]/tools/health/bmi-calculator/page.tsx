@@ -1,5 +1,5 @@
 import { getTranslations } from 'next-intl/server';
-import BmiCalculatorClient from './BmiCalculatorClient';
+import BmiCalculatorClient from '../../../../../components/features/health/bmi-calculator/BmiCalculatorClient';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params;
