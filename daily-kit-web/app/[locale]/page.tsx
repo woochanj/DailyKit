@@ -1,5 +1,5 @@
 import { getTranslations } from 'next-intl/server';
-import HomeClient from './HomeClient';
+import HomeClient from '@/components/features/home/HomeClient';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params;

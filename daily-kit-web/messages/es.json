@@ -7,8 +7,12 @@
         "jsonFormatterDesc": "Validar datos JSON.",
         "devDataTitle": "Desarrollo y Datos",
         "devDataDesc": "Herramientas para desarrolladores y procesamiento de datos.",
-        "screenDeviceTestsTitle": "Pruebas de Pantalla y Dispositivos",
-        "screenDeviceTestsDesc": "Prueba tu pantalla y dispositivos.",
+        "allToolsTitle": "Todas las Herramientas",
+        "allToolsDesc": "Explora nuestra colección de utilidades útiles.",
+        "screenTestsTitle": "Pruebas de Pantalla",
+        "screenTestsDesc": "Prueba tu pantalla y monitor.",
+        "deviceTestsTitle": "Pruebas de Dispositivos",
+        "deviceTestsDesc": "Prueba tus periféricos.",
         "healthLifeTitle": "Salud y Vida",
         "healthLifeDesc": "Calculadoras para la salud y la vida diaria.",
         "blogTitle": "Blog",
@@ -72,19 +76,21 @@
         "description": "Consejos técnicos y guías de reparación."
     },
     "Tools": {
-        "ScreenDevice": {
-            "Keyboard": {
-                "title": "Prueba de Teclado",
-                "description": "Verificar ghosting"
-            },
-            "Mouse": {
-                "title": "Prueba de Ratón",
-                "description": "Verificar doble clic"
-            },
-            "Gamepad": {
-                "title": "Prueba de Gamepad",
-                "description": "Verificar joystick"
-            }
+        "Screen": {
+            "title": "Pruebas de Pantalla",
+            "description": "Prueba tu pantalla, monitor y visualización.",
+            "displayTestTitle": "Prueba de Pantalla",
+            "displayTestDesc": "Comprueba píxeles muertos y fugas de luz."
+        },
+        "Device": {
+            "title": "Pruebas de Dispositivos",
+            "description": "Prueba tu teclado, ratón y gamepad.",
+            "gamepadTestTitle": "Prueba de Gamepad",
+            "gamepadTestDesc": "Comprueba joystick y botones.",
+            "keyboardTestTitle": "Prueba de Teclado",
+            "keyboardTestDesc": "Comprueba ghosting y respuesta de teclas.",
+            "mouseTestTitle": "Prueba de Ratón",
+            "mouseTestDesc": "Comprueba doble clic y desplazamiento."
         }
     }
 }

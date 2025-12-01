@@ -1,14 +1,18 @@
 {
   "Index": {
     "greeting": "Hello World!",
+    "allToolsTitle": "All Tools",
+    "allToolsDesc": "Explore our collection of useful utilities.",
     "displayTestTitle": "Display Test",
     "displayTestDesc": "Test Dead pixel, color, and brightness, etc.",
     "jsonFormatterTitle": "JSON Formatter",
     "jsonFormatterDesc": "Validate JSON data.",
     "devDataTitle": "Dev & Data",
     "devDataDesc": "Tools for developers and data processing.",
-    "screenDeviceTestsTitle": "Screen & Device Tests",
-    "screenDeviceTestsDesc": "Test your screen and devices.",
+    "screenTestsTitle": "Screen Tests",
+    "screenTestsDesc": "Test your screen and monitor.",
+    "deviceTestsTitle": "Device Tests",
+    "deviceTestsDesc": "Test your peripherals.",
     "healthLifeTitle": "Health & Life",
     "healthLifeDesc": "Calculators for health and daily life.",
     "blogTitle": "Blog",
@@ -72,19 +76,44 @@
     "description": "Tech tips and repair guides."
   },
   "Tools": {
-    "ScreenDevice": {
-      "Keyboard": {
-        "title": "Keyboard Test",
-        "description": "Check ghosting"
-      },
-      "Mouse": {
-        "title": "Mouse Test",
-        "description": "Check double click"
-      },
-      "Gamepad": {
-        "title": "Gamepad Test",
-        "description": "Check joystick"
-      }
+    "Screen": {
+      "title": "Screen Tests",
+      "description": "Test your screen, monitor, and display.",
+      "displayTestTitle": "Display Test",
+      "displayTestDesc": "Check for dead pixels and backlight bleeding."
+    },
+    "Device": {
+      "title": "Device Tests",
+      "description": "Test your keyboard, mouse, and gamepad.",
+      "gamepadTestTitle": "Gamepad Test",
+      "gamepadTestDesc": "Check joystick and buttons.",
+      "keyboardTestTitle": "Keyboard Test",
+      "keyboardTestDesc": "Check ghosting and key response.",
+      "mouseTestTitle": "Mouse Test",
+      "mouseTestDesc": "Check double click and scroll."
     }
+  },
+  "Privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last Updated: December 1, 2025",
+    "intro": "At DailyKit, accessible from dailykit.com, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by DailyKit and how we use it.",
+    "logFilesTitle": "Log Files",
+    "logFilesDesc": "DailyKit follows a standard procedure of using log files. These files log visitors when they visit websites. All hosting companies do this and a part of hosting services' analytics.",
+    "cookiesTitle": "Cookies and Web Beacons",
+    "cookiesDesc": "Like any other website, DailyKit uses 'cookies'. These cookies are used to store information including visitors' preferences, and the pages on the website that the visitor accessed or visited.",
+    "googleTitle": "Google DoubleClick DART Cookie",
+    "googleDesc": "Google is one of a third-party vendor on our site. It also uses cookies, known as DART cookies, to serve ads to our site visitors based upon their visit to www.website.com and other sites on the internet."
+  },
+  "Terms": {
+    "title": "Terms of Service",
+    "intro": "Welcome to DailyKit!",
+    "desc": "These terms and conditions outline the rules and regulations for the use of DailyKit's Website.",
+    "licenseTitle": "License",
+    "licenseDesc": "Unless otherwise stated, DailyKit and/or its licensors own the intellectual property rights for all material on DailyKit. All intellectual property rights are reserved."
+  },
+  "Contact": {
+    "title": "Contact Us",
+    "desc": "If you have any questions about these Terms, please contact us.",
+    "email": "Email: contact@dailykit.com"
   }
 }

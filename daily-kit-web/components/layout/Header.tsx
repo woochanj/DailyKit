@@ -1,10 +1,9 @@
 'use client';
 
-import Link from 'next/link';
 import { useState, useEffect, useRef } from 'react';
-import { usePathname, useRouter } from '@/i18n/routing';
+import { Link, usePathname, useRouter } from '@/i18n/routing';
 import { useLocale } from 'next-intl';
-import { Globe } from 'lucide-react';
+import { Globe, SquareTerminal } from 'lucide-react';
 
 const languages = {
     en: 'English',
@@ -78,17 +77,12 @@ export default function Header() {
     return (
         <header className={`fixed top-0 left-0 right-0 h-[var(--header-height)] flex items-center px-5 md:px-10 bg-[rgba(255,255,255,0.7)] dark:bg-[rgba(0,0,0,0.7)] backdrop-blur-[20px] border-b border-[var(--border)] z-[1000] transition-transform duration-300 ease-out ${isHidden ? '-translate-y-full' : ''}`}>
             <div className="w-full max-w-[1024px] mx-auto flex justify-between items-center h-full">
-                <Link href="/" className="flex items-center no-underline transition-opacity duration-200 hover:opacity-70" aria-label="dailyKit Home">
-                    <svg width="150" height="40" viewBox="0 0 150 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        {/* Wireframe Style: Stroke only, no fill */}
-                        <rect x="1" y="1" width="38" height="38" rx="12" stroke="var(--foreground)" strokeWidth="2" fill="none" />
-                        <path d="M12 20L18 26L28 14" stroke="var(--foreground)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-
-                        <g style={{ fill: 'var(--foreground)', fontFamily: 'var(--font-sans)' }}>
-                            <text x="52" y="28" fontSize="22" fontWeight="700">daily</text>
-                            <text x="102" y="28" fontSize="22" fontWeight="400">Kit</text>
-                        </g>
-                    </svg>
+                <Link href="/" className="flex items-center gap-2 no-underline transition-opacity duration-200 hover:opacity-70" aria-label="dailyKit Home">
+                    <SquareTerminal size={26} strokeWidth={1.5} className="text-neutral-900 dark:text-white" />
+                    <div className="flex items-center" style={{ fontFamily: 'var(--font-sans)' }}>
+                        <span className="text-[22px] font-bold text-[var(--foreground)]">daily</span>
+                        <span className="text-[22px] font-normal text-[var(--foreground)]">Kit</span>
+                    </div>
                 </Link>
                 <nav className="flex gap-5 md:gap-8 items-center">
                     <Link href="/" className={`no-underline text-[var(--text-main)] text-[13px] md:text-sm font-medium uppercase tracking-[0.05em] transition-colors duration-200 relative hover:opacity-70 ${pathname === '/' ? 'after:content-[""] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-[var(--foreground)]' : ''}`}>Home</Link>

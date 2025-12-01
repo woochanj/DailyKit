@@ -1,14 +1,18 @@
 {
   "Index": {
     "greeting": "세상아 안녕!",
+    "allToolsTitle": "모든 도구",
+    "allToolsDesc": "유용한 도구 모음을 확인해보세요.",
     "displayTestTitle": "Display Test",
     "displayTestDesc": "불량 화소, 색상, 밝기 등을 테스트합니다.",
     "jsonFormatterTitle": "JSON Formatter",
     "jsonFormatterDesc": "JSON 데이터를 검증하고 포맷팅합니다.",
     "devDataTitle": "개발 & 데이터",
     "devDataDesc": "개발자와 데이터 처리를 위한 도구.",
-    "screenDeviceTestsTitle": "화면 및 기기 테스트",
-    "screenDeviceTestsDesc": "화면과 기기를 테스트하세요.",
+    "screenTestsTitle": "화면 테스트",
+    "screenTestsDesc": "화면과 모니터를 테스트하세요.",
+    "deviceTestsTitle": "기기 테스트",
+    "deviceTestsDesc": "주변 기기를 테스트하세요.",
     "healthLifeTitle": "Health & Life",
     "healthLifeDesc": "건강 및 일상 생활을 위한 계산기.",
     "blogTitle": "블로그",
@@ -72,19 +76,44 @@
     "description": "기술 팁 및 수리 가이드."
   },
   "Tools": {
-    "ScreenDevice": {
-      "Keyboard": {
-        "title": "키보드 테스트",
-        "description": "고스팅 현상 확인"
-      },
-      "Mouse": {
-        "title": "마우스 테스트",
-        "description": "더블 클릭 현상 확인"
-      },
-      "Gamepad": {
-        "title": "게임패드 테스트",
-        "description": "조이스틱 점검"
-      }
+    "Screen": {
+      "title": "화면 테스트",
+      "description": "화면, 모니터, 디스플레이를 테스트하세요.",
+      "displayTestTitle": "디스플레이 테스트",
+      "displayTestDesc": "불량 화소 및 빛샘 현상 확인."
+    },
+    "Device": {
+      "title": "기기 테스트",
+      "description": "키보드, 마우스, 게임패드를 테스트하세요.",
+      "gamepadTestTitle": "게임패드 테스트",
+      "gamepadTestDesc": "조이스틱 및 버튼 점검.",
+      "keyboardTestTitle": "키보드 테스트",
+      "keyboardTestDesc": "고스팅 및 키 반응 확인.",
+      "mouseTestTitle": "마우스 테스트",
+      "mouseTestDesc": "더블 클릭 및 스크롤 확인."
     }
+  },
+  "Privacy": {
+    "title": "개인정보처리방침",
+    "lastUpdated": "최종 수정일: 2025년 12월 1일",
+    "intro": "DailyKit은 방문자의 개인정보를 매우 중요하게 생각합니다. 본 개인정보처리방침 문서는 DailyKit이 수집하고 기록하는 정보의 종류와 그 사용 방법을 설명합니다.",
+    "logFilesTitle": "로그 파일",
+    "logFilesDesc": "DailyKit은 로그 파일을 사용하는 표준 절차를 따릅니다. 이 파일은 방문자가 웹사이트를 방문할 때 로그를 기록합니다.",
+    "cookiesTitle": "쿠키 및 웹 비콘",
+    "cookiesDesc": "다른 웹사이트와 마찬가지로 DailyKit은 '쿠키'를 사용합니다. 이 쿠키는 방문자의 선호도 및 방문자가 액세스하거나 방문한 웹사이트 페이지를 포함한 정보를 저장하는 데 사용됩니다.",
+    "googleTitle": "Google DoubleClick DART 쿠키",
+    "googleDesc": "Google은 저희 사이트의 제3자 공급업체 중 하나입니다. 또한 DART 쿠키라고 하는 쿠키를 사용하여 인터넷의 다른 사이트 방문을 기반으로 저희 사이트 방문자에게 광고를 제공합니다."
+  },
+  "Terms": {
+    "title": "이용약관",
+    "intro": "DailyKit에 오신 것을 환영합니다!",
+    "desc": "본 약관은 DailyKit 웹사이트 사용에 대한 규칙 및 규정을 설명합니다.",
+    "licenseTitle": "라이선스",
+    "licenseDesc": "별도로 명시되지 않는 한, DailyKit 및/또는 해당 라이선스 제공자는 DailyKit의 모든 자료에 대한 지적 재산권을 소유합니다. 모든 지적 재산권은 보호됩니다."
+  },
+  "Contact": {
+    "title": "문의하기",
+    "desc": "본 약관에 대해 궁금한 점이 있으시면 문의해 주십시오.",
+    "email": "이메일: contact@dailykit.com"
   }
 }

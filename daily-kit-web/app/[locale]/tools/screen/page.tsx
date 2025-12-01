@@ -1,9 +1,9 @@
 import { getTranslations } from 'next-intl/server';
-import DisplayTestClient from './DisplayTestClient';
+import ScreenToolsList from '@/components/features/screen/ScreenToolsList';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params;
-    const t = await getTranslations({ locale, namespace: 'Metadata.DisplayTest' });
+    const t = await getTranslations({ locale, namespace: 'Tools.Screen' });
 
     return {
         title: t('title'),
@@ -11,6 +11,6 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     };
 }
 
-export default function DisplayTestPage() {
-    return <DisplayTestClient />;
+export default function ScreenToolsPage() {
+    return <ScreenToolsList />;
 }

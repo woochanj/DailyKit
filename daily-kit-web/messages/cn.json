@@ -7,8 +7,12 @@
         "jsonFormatterDesc": "验证 JSON 数据。",
         "devDataTitle": "开发与数据",
         "devDataDesc": "开发人员和数据处理工具。",
-        "screenDeviceTestsTitle": "屏幕与设备测试",
-        "screenDeviceTestsDesc": "测试您的屏幕和设备。",
+        "allToolsTitle": "所有工具",
+        "allToolsDesc": "探索我们实用的工具集合。",
+        "screenTestsTitle": "屏幕测试",
+        "screenTestsDesc": "测试您的屏幕和显示器。",
+        "deviceTestsTitle": "设备测试",
+        "deviceTestsDesc": "测试您的外设。",
         "healthLifeTitle": "健康与生活",
         "healthLifeDesc": "健康和日常生活计算器。",
         "blogTitle": "博客",
@@ -72,19 +76,21 @@
         "description": "技术提示和维修指南。"
     },
     "Tools": {
-        "ScreenDevice": {
-            "Keyboard": {
-                "title": "键盘测试",
-                "description": "检查重影"
-            },
-            "Mouse": {
-                "title": "鼠标测试",
-                "description": "检查双击"
-            },
-            "Gamepad": {
-                "title": "手柄测试",
-                "description": "检查操纵杆"
-            }
+        "Screen": {
+            "title": "屏幕测试",
+            "description": "测试您的屏幕、显示器和显示设备。",
+            "displayTestTitle": "显示测试",
+            "displayTestDesc": "检查坏点和背光漏光。"
+        },
+        "Device": {
+            "title": "设备测试",
+            "description": "测试您的键盘、鼠标和手柄。",
+            "gamepadTestTitle": "手柄测试",
+            "gamepadTestDesc": "检查操纵杆和按钮。",
+            "keyboardTestTitle": "键盘测试",
+            "keyboardTestDesc": "检查重影和按键响应。",
+            "mouseTestTitle": "鼠标测试",
+            "mouseTestDesc": "检查双击和滚动。"
         }
     }
 }

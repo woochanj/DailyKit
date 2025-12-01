@@ -1,16 +1,16 @@
 import { getTranslations } from 'next-intl/server';
-import DeveloperToolsClient from './DeveloperToolsClient';
+import DeveloperToolsList from '@/components/features/developer/DeveloperToolsList';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params;
-    const t = await getTranslations({ locale, namespace: 'Metadata.Developer' });
+    const t = await getTranslations({ locale, namespace: 'Index' });
 
     return {
-        title: t('title'),
-        description: t('description'),
+        title: t('developerKitTitle'),
+        description: t('developerKitDesc'),
     };
 }
 
 export default function DeveloperToolsPage() {
-    return <DeveloperToolsClient />;
+    return <DeveloperToolsList />;
 }

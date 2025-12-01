@@ -7,8 +7,12 @@
         "jsonFormatterDesc": "Valider les données JSON.",
         "devDataTitle": "Dév & Données",
         "devDataDesc": "Outils pour les développeurs et le traitement des données.",
-        "screenDeviceTestsTitle": "Tests d'Écran et d'Appareils",
-        "screenDeviceTestsDesc": "Testez votre écran et vos appareils.",
+        "allToolsTitle": "Tous les Outils",
+        "allToolsDesc": "Explorez notre collection d'utilitaires utiles.",
+        "screenTestsTitle": "Tests d'Écran",
+        "screenTestsDesc": "Testez votre écran et moniteur.",
+        "deviceTestsTitle": "Tests d'Appareils",
+        "deviceTestsDesc": "Testez vos périphériques.",
         "healthLifeTitle": "Santé et Vie",
         "healthLifeDesc": "Calculatrices pour la santé et la vie quotidienne.",
         "blogTitle": "Blog",
@@ -72,19 +76,21 @@
         "description": "Conseils techniques et guides de réparation."
     },
     "Tools": {
-        "ScreenDevice": {
-            "Keyboard": {
-                "title": "Test de Clavier",
-                "description": "Vérifier le ghosting"
-            },
-            "Mouse": {
-                "title": "Test de Souris",
-                "description": "Vérifier le double clic"
-            },
-            "Gamepad": {
-                "title": "Test de Manette",
-                "description": "Vérifier le joystick"
-            }
+        "Screen": {
+            "title": "Tests d'Écran",
+            "description": "Testez votre écran, moniteur et affichage.",
+            "displayTestTitle": "Test d'Affichage",
+            "displayTestDesc": "Vérifiez les pixels morts et les fuites de lumière."
+        },
+        "Device": {
+            "title": "Tests d'Appareils",
+            "description": "Testez votre clavier, souris et manette.",
+            "gamepadTestTitle": "Test de Manette",
+            "gamepadTestDesc": "Vérifiez le joystick et les boutons.",
+            "keyboardTestTitle": "Test de Clavier",
+            "keyboardTestDesc": "Vérifiez le ghosting et la réponse des touches.",
+            "mouseTestTitle": "Test de Souris",
+            "mouseTestDesc": "Vérifiez le double clic et le défilement."
         }
     }
 }

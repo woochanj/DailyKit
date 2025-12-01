@@ -2,16 +2,17 @@
 
 import { Link } from '@/i18n/routing';
 import { usePathname } from '@/i18n/routing';
-import { LayoutGrid, Monitor, Code, Heart, BookOpen } from 'lucide-react';
+import { LayoutGrid, Monitor, Code, Heart, BookOpen, Gamepad2 } from 'lucide-react';
 
 export default function Sidebar() {
     const pathname = usePathname();
 
     const navItems = [
         { href: '/tools', label: 'All Tools', icon: LayoutGrid, exact: true },
-        { href: '/tools/screen-device-tests', label: 'Screen & Device', icon: Monitor },
+        { href: '/tools/screen', label: 'Screen', icon: Monitor },
+        { href: '/tools/device', label: 'Device', icon: Gamepad2 },
         { href: '/tools/developer', label: 'Developer', icon: Code },
-        { href: '/tools/health', label: 'Health & Life', icon: Heart },
+        // { href: '/tools/health', label: 'Health & Life', icon: Heart },
         { href: '/blog', label: 'Blog', icon: BookOpen },
     ];
 

@@ -7,8 +7,12 @@
         "jsonFormatterDesc": "JSONデータを検証します。",
         "devDataTitle": "開発＆データ",
         "devDataDesc": "開発者およびデータ処理のためのツール。",
-        "screenDeviceTestsTitle": "画面＆デバイス・テスト",
-        "screenDeviceTestsDesc": "画面とデバイスをテストします。",
+        "allToolsTitle": "すべてのツール",
+        "allToolsDesc": "便利なユーティリティのコレクションをご覧ください。",
+        "screenTestsTitle": "画面テスト",
+        "screenTestsDesc": "画面とモニターをテストします。",
+        "deviceTestsTitle": "デバイステスト",
+        "deviceTestsDesc": "周辺機器をテストします。",
         "healthLifeTitle": "健康＆生活",
         "healthLifeDesc": "健康と日常生活のための計算機。",
         "blogTitle": "ブログ",
@@ -72,19 +76,21 @@
         "description": "技術的なヒントと修理ガイド。"
     },
     "Tools": {
-        "ScreenDevice": {
-            "Keyboard": {
-                "title": "キーボードテスト",
-                "description": "ゴーストの確認"
-            },
-            "Mouse": {
-                "title": "マウステスト",
-                "description": "ダブルクリックの確認"
-            },
-            "Gamepad": {
-                "title": "ゲームパッドテスト",
-                "description": "ジョイスティックの確認"
-            }
+        "Screen": {
+            "title": "画面テスト",
+            "description": "画面、モニター、ディスプレイをテストします。",
+            "displayTestTitle": "ディスプレイテスト",
+            "displayTestDesc": "ドット抜けやバックライト漏れを確認します。"
+        },
+        "Device": {
+            "title": "デバイステスト",
+            "description": "キーボード、マウス、ゲームパッドをテストします。",
+            "gamepadTestTitle": "ゲームパッドテスト",
+            "gamepadTestDesc": "ジョイスティックとボタンを確認します。",
+            "keyboardTestTitle": "キーボードテスト",
+            "keyboardTestDesc": "ゴーストとキー反応を確認します。",
+            "mouseTestTitle": "マウステスト",
+            "mouseTestDesc": "ダブルクリックとスクロールを確認します。"
         }
     }
 }

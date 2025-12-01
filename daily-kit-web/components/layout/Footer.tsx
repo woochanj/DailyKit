@@ -17,6 +17,7 @@ export default function Footer() {
                     <li><Link href="/about" className="text-[var(--text-sub)] no-underline text-sm transition-colors duration-200 hover:text-[var(--foreground)]">About Us</Link></li>
                     <li><Link href="/privacy" className="text-[var(--text-sub)] no-underline text-sm transition-colors duration-200 hover:text-[var(--foreground)]">Privacy Policy</Link></li>
                     <li><Link href="/terms" className="text-[var(--text-sub)] no-underline text-sm transition-colors duration-200 hover:text-[var(--foreground)]">Terms of Service</Link></li>
+                    <li><Link href="/contact" className="text-[var(--text-sub)] no-underline text-sm transition-colors duration-200 hover:text-[var(--foreground)]">Contact Us</Link></li>
                 </ul>
 
                 <div className="text-center text-xs text-[var(--text-sub)] opacity-60">

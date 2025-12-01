@@ -1,16 +1,16 @@
 import { getTranslations } from 'next-intl/server';
-import HealthToolsClient from './HealthToolsClient';
+import HealthToolsList from '@/components/features/health/HealthToolsList';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params;
-    const t = await getTranslations({ locale, namespace: 'Metadata.Health' });
+    const t = await getTranslations({ locale, namespace: 'Index' });
 
     return {
-        title: t('title'),
-        description: t('description'),
+        title: t('healthLifeTitle'),
+        description: t('healthLifeDesc'),
     };
 }
 
 export default function HealthToolsPage() {
-    return <HealthToolsClient />;
+    return <HealthToolsList />;
 }
