@@ -91,6 +91,15 @@
       "keyboardTestDesc": "Check ghosting and key response.",
       "mouseTestTitle": "Mouse Test",
       "mouseTestDesc": "Check double click and scroll."
+    },
+    "ScreenDevice": {
+      "Keyboard": {
+        "title": "Keyboard Test",
+        "description": "Test your keyboard for ghosting, chattering, and key rollover.",
+        "reset": "Reset Test",
+        "chattering": "Chattering Detected",
+        "statsTitle": "Detailed Statistics"
+      }
     }
   },
   "Privacy": {

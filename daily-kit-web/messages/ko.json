@@ -91,6 +91,15 @@
       "keyboardTestDesc": "고스팅 및 키 반응 확인.",
       "mouseTestTitle": "마우스 테스트",
       "mouseTestDesc": "더블 클릭 및 스크롤 확인."
+    },
+    "ScreenDevice": {
+      "Keyboard": {
+        "title": "키보드 테스트",
+        "description": "고스팅, 채터링(중복 입력), 동시 입력을 테스트하세요.",
+        "reset": "초기화",
+        "chattering": "채터링 감지됨",
+        "statsTitle": "상세 통계"
+      }
     }
   },
   "Privacy": {
