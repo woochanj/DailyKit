@@ -1,11 +1,11 @@
 "use client";
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import { useTranslations } from 'next-intl';
 import { KeyState } from './KeyMap';
 import VirtualKeyboard, { KeyboardLayoutType } from './VirtualKeyboard';
 import ChatteringTable from './ChatteringTable';
-import { RotateCcw, AlertTriangle, Keyboard as KeyboardIcon } from 'lucide-react';
+import { RotateCcw, AlertTriangle, Keyboard as KeyboardIcon, Zap, Volume2, VolumeX } from 'lucide-react';
 
 export default function KeyboardTestClient() {
     const t = useTranslations('Tools.ScreenDevice.Keyboard');
@@ -14,10 +14,37 @@ export default function KeyboardTestClient() {
     const [chatterCount, setChatterCount] = useState(0);
     const [layout, setLayout] = useState<KeyboardLayoutType>('full');
 
+    // New Features State
+    const [maxRollover, setMaxRollover] = useState(0);
+    const [isMuted, setIsMuted] = useState(false);
+    const audioRef = useRef<HTMLAudioElement | null>(null);
+
     const CHATTER_THRESHOLD = 50; // ms
 
+    // Initialize Audio
+    useEffect(() => {
+        audioRef.current = new Audio('/sounds/click.mp3');
+        audioRef.current.volume = 0.3;
+    }, []);
+
+    const playSound = useCallback(() => {
+        if (!isMuted && audioRef.current) {
+            // Clone node to allow overlapping sounds for fast typing
+            const sound = audioRef.current.cloneNode() as HTMLAudioElement;
+            sound.volume = 0.2;
+            sound.play().catch(() => { }); // Ignore auto-play errors
+        }
+    }, [isMuted]);
+
     const handleKeyDown = useCallback((e: KeyboardEvent) => {
-        e.preventDefault();
+        // Allow typing in the playground textarea
+        const isTextarea = e.target instanceof HTMLTextAreaElement;
+        if (!isTextarea) {
+            e.preventDefault();
+        }
+
+        playSound();
+
         const code = e.code;
         const now = Date.now();
 
@@ -43,7 +70,7 @@ export default function KeyboardTestClient() {
         });
 
         setHistory(prev => [code, ...prev].slice(0, 20));
-    }, []);
+    }, [playSound]);
 
     const handleKeyUp = useCallback((e: KeyboardEvent) => {
         e.preventDefault();
@@ -58,6 +85,14 @@ export default function KeyboardTestClient() {
         }));
     }, []);
 
+    // Track Max Rollover (NKRO)
+    useEffect(() => {
+        const currentPressed = Object.values(keyStates).filter(k => k.pressed).length;
+        if (currentPressed > maxRollover) {
+            setMaxRollover(currentPressed);
+        }
+    }, [keyStates, maxRollover]);
+
     useEffect(() => {
         window.addEventListener('keydown', handleKeyDown);
         window.addEventListener('keyup', handleKeyUp);
@@ -71,6 +106,7 @@ export default function KeyboardTestClient() {
         setKeyStates({});
         setHistory([]);
         setChatterCount(0);
+        setMaxRollover(0);
     };
 
     return (
@@ -81,12 +117,31 @@ export default function KeyboardTestClient() {
                     <h1 className="text-3xl font-bold mb-2">{t('title')}</h1>
                     <p className="text-[var(--text-sub)]">{t('description')}</p>
                 </div>
-                <div className="flex gap-4">
+                <div className="flex flex-wrap justify-center gap-3">
+                    {/* NKRO Badge */}
+                    <div className="bg-[var(--card)] border border-[var(--border)] rounded-xl px-4 py-2 flex items-center gap-2">
+                        <Zap size={20} className="text-yellow-500" fill="currentColor" />
+                        <span className="font-mono font-bold">{maxRollover}</span>
+                        <span className="text-sm text-[var(--text-sub)]">Max Keys</span>
+                    </div>
+
+                    {/* Chatter Badge */}
                     <div className="bg-[var(--card)] border border-[var(--border)] rounded-xl px-4 py-2 flex items-center gap-2">
                         <AlertTriangle size={20} className={chatterCount > 0 ? "text-red-500" : "text-gray-400"} />
                         <span className="font-mono font-bold">{chatterCount}</span>
                         <span className="text-sm text-[var(--text-sub)]">Chatters</span>
                     </div>
+
+                    {/* Sound Toggle */}
+                    <button
+                        onClick={() => setIsMuted(!isMuted)}
+                        className="flex items-center justify-center w-10 h-10 bg-[var(--card)] border border-[var(--border)] rounded-xl hover:bg-[var(--card-hover)] transition-colors"
+                        title={isMuted ? "Unmute" : "Mute"}
+                    >
+                        {isMuted ? <VolumeX size={20} className="text-gray-400" /> : <Volume2 size={20} className="text-blue-500" />}
+                    </button>
+
+                    {/* Reset Button */}
                     <button
                         onClick={resetTest}
                         className="flex items-center gap-2 px-4 py-2 bg-[var(--card)] border border-[var(--border)] rounded-xl hover:bg-[var(--card-hover)] transition-colors"
@@ -117,6 +172,15 @@ export default function KeyboardTestClient() {
                         </span>
                     </button>
                 ))}
+            </div>
+
+            {/* Typing Playground */}
+            <div className="mb-8">
+                <textarea
+                    className="w-full h-24 bg-transparent border border-[var(--border)] rounded-xl p-4 text-lg font-sans placeholder:text-[var(--text-sub)]/50 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all resize-none"
+                    placeholder="Type here to test input (Hangul/English)..."
+                    spellCheck={false}
+                />
             </div>
 
             {/* Virtual Keyboard */}
