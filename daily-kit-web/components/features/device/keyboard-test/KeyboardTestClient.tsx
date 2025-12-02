@@ -3,15 +3,16 @@
 import { useState, useEffect, useCallback } from 'react';
 import { useTranslations } from 'next-intl';
 import { KeyState } from './KeyMap';
-import VirtualKeyboard from './VirtualKeyboard';
+import VirtualKeyboard, { KeyboardLayoutType } from './VirtualKeyboard';
 import ChatteringTable from './ChatteringTable';
-import { RotateCcw, AlertTriangle } from 'lucide-react';
+import { RotateCcw, AlertTriangle, Keyboard as KeyboardIcon } from 'lucide-react';
 
 export default function KeyboardTestClient() {
     const t = useTranslations('Tools.ScreenDevice.Keyboard');
     const [keyStates, setKeyStates] = useState<Record<string, KeyState>>({});
     const [history, setHistory] = useState<string[]>([]);
     const [chatterCount, setChatterCount] = useState(0);
+    const [layout, setLayout] = useState<KeyboardLayoutType>('full');
 
     const CHATTER_THRESHOLD = 50; // ms
 
@@ -96,8 +97,30 @@ export default function KeyboardTestClient() {
                 </div>
             </div>
 
+            {/* Layout Switcher */}
+            <div className="flex gap-2 mb-6 overflow-x-auto pb-2">
+                {(['full', 'tkl', '75%', '60%'] as const).map((l) => (
+                    <button
+                        key={l}
+                        onClick={() => setLayout(l)}
+                        className={`
+                            flex items-center gap-2 px-4 py-2 rounded-xl border transition-all whitespace-nowrap
+                            ${layout === l
+                                ? "bg-blue-500 text-white border-blue-500 shadow-lg shadow-blue-500/20"
+                                : "bg-[var(--card)] border-[var(--border)] text-[var(--text-sub)] hover:bg-[var(--card-hover)]"
+                            }
+                        `}
+                    >
+                        <KeyboardIcon size={16} />
+                        <span className="font-medium">
+                            {l === 'full' ? 'Full Size' : l === 'tkl' ? 'TKL (87)' : l === '75%' ? '75%' : '60% (Mini)'}
+                        </span>
+                    </button>
+                ))}
+            </div>
+
             {/* Virtual Keyboard */}
-            <VirtualKeyboard keyStates={keyStates} />
+            <VirtualKeyboard keyStates={keyStates} layout={layout} />
 
             {/* Input History (Restored) */}
             {history.length > 0 && (
