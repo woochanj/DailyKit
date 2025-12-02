@@ -76,7 +76,7 @@ export default function Header() {
 
     return (
         <header className={`fixed top-0 left-0 right-0 h-[var(--header-height)] flex items-center px-5 md:px-10 bg-[rgba(255,255,255,0.7)] dark:bg-[rgba(0,0,0,0.7)] backdrop-blur-[20px] border-b border-[var(--border)] z-[1000] transition-transform duration-300 ease-out ${isHidden ? '-translate-y-full' : ''}`}>
-            <div className="w-full max-w-[1024px] mx-auto flex justify-between items-center h-full">
+            <div className="w-full max-w-[1440px] mx-auto flex justify-between items-center h-full">
                 <Link href="/" className="flex items-center gap-2 no-underline transition-opacity duration-200 hover:opacity-70" aria-label="dailyKit Home">
                     <SquareTerminal size={26} strokeWidth={1.5} className="text-neutral-900 dark:text-white" />
                     <div className="flex items-center" style={{ fontFamily: 'var(--font-sans)' }}>
