@@ -6,7 +6,7 @@ export default function ContactClient() {
     const t = useTranslations('Contact');
 
     return (
-        <div className="container mx-auto py-12 px-4 max-w-2xl text-center">
+        <div className="w-[calc(100%-3rem)] max-w-2xl mx-auto py-12 text-center">
             <h1 className="text-3xl font-bold mb-8">{t('title')}</h1>
             <div className="bg-gray-50 dark:bg-gray-900 p-8 rounded-2xl border border-gray-200 dark:border-gray-800">
                 <p className="text-lg mb-6">{t('desc')}</p>

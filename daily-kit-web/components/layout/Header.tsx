@@ -85,8 +85,8 @@ export default function Header() {
 
     return (
         <>
-            <header className={`fixed top-0 left-0 right-0 h-[var(--header-height)] flex items-center px-5 md:px-10 bg-[rgba(255,255,255,0.7)] dark:bg-[rgba(0,0,0,0.7)] backdrop-blur-[20px] border-b border-[var(--border)] z-[1000] transition-transform duration-300 ease-out ${isHidden ? '-translate-y-full' : ''}`}>
-                <div className="w-full max-w-[1280px] mx-auto flex justify-between items-center h-full">
+            <header className={`fixed top-0 left-0 right-0 z-[1000] flex justify-center pt-4 transition-transform duration-300 ease-out pointer-events-none ${isHidden ? '-translate-y-full' : ''}`}>
+                <div className="w-[calc(100%-3rem)] max-w-[1280px] h-[var(--header-height)] flex justify-between items-center px-6 rounded-2xl bg-[var(--background)]/80 backdrop-blur-md pointer-events-auto">
                     <Link href="/" className="flex items-center gap-2 no-underline transition-opacity duration-200 hover:opacity-70" aria-label="dailyKit Home">
                         <SquareTerminal size={26} strokeWidth={1.5} className="text-neutral-900 dark:text-white" />
                         <div className="flex items-center" style={{ fontFamily: 'var(--font-sans)' }}>
@@ -95,28 +95,28 @@ export default function Header() {
                         </div>
                     </Link>
 
-                    {/* Desktop Nav */}
-                    <nav className="hidden md:flex gap-5 md:gap-8 items-center">
-                        <Link href="/" className={`no-underline text-[var(--text-main)] text-[13px] md:text-sm font-medium uppercase tracking-[0.05em] transition-colors duration-200 relative hover:opacity-70 ${pathname === '/' ? 'after:content-[""] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-[var(--foreground)]' : ''}`}>Home</Link>
-                        <Link href="/tools" className={`no-underline text-[var(--text-main)] text-[13px] md:text-sm font-medium uppercase tracking-[0.05em] transition-colors duration-200 relative hover:opacity-70 ${pathname.startsWith('/tools') ? 'after:content-[""] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-[var(--foreground)]' : ''}`}>Tools</Link>
-                        <Link href="/about" className={`no-underline text-[var(--text-main)] text-[13px] md:text-sm font-medium uppercase tracking-[0.05em] transition-colors duration-200 relative hover:opacity-70 ${pathname === '/about' ? 'after:content-[""] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-[var(--foreground)]' : ''}`}>About</Link>
+                    <div className="flex items-center gap-4">
+                        {/* Menu Button (Desktop & Mobile) */}
+                        <button
+                            onClick={() => setIsMobileMenuOpen(true)}
+                            className="flex items-center gap-2 px-5 py-1.5 rounded-full text-[var(--foreground)] text-sm font-medium hover:bg-[var(--foreground)]/5 transition-all duration-300"
+                        >
+                            MENU
+                        </button>
 
-                        {/* Custom Language Dropdown */}
-                        <div className="relative ml-4" ref={dropdownRef}>
+                        {/* Language Switcher */}
+                        <div className="relative" ref={dropdownRef}>
                             <button
                                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                                className="flex items-center justify-center gap-2 w-32 py-2 rounded-lg hover:bg-[var(--background)]/50 hover:opacity-70 transition-all duration-200 group"
+                                className="p-2 rounded-full text-[var(--foreground)] hover:bg-[var(--foreground)]/5 transition-all duration-300"
                                 aria-label="Select Language"
                             >
-                                <Globe size={18} className="text-[var(--text-main)] transition-colors" strokeWidth={1.5} />
-                                <span className="text-sm font-medium text-[var(--text-main)] uppercase tracking-wider transition-colors">
-                                    {languages[locale as keyof typeof languages]}
-                                </span>
+                                <Globe size={20} strokeWidth={1.5} />
                             </button>
 
                             {/* Dropdown Menu */}
                             {isDropdownOpen && (
-                                <div className="absolute right-0 mt-2 w-32 py-2 rounded-2xl border border-[var(--border)] bg-[var(--background)]/80 backdrop-blur-xl flex flex-col gap-1 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
+                                <div className="absolute right-0 top-full mt-2 w-32 py-2 rounded-2xl border border-[var(--border)] bg-[var(--background)]/80 backdrop-blur-md shadow-sm flex flex-col gap-1 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
                                     {Object.entries(languages).map(([code, label]) => (
                                         <button
                                             key={code}
@@ -132,58 +132,45 @@ export default function Header() {
                                 </div>
                             )}
                         </div>
-                    </nav>
-
-                    {/* Mobile Menu Button */}
-                    <button
-                        className="md:hidden p-2 text-[var(--foreground)]"
-                        onClick={() => setIsMobileMenuOpen(true)}
-                        aria-label="Open Menu"
-                    >
-                        <Menu size={24} />
-                    </button>
+                    </div>
                 </div>
             </header>
 
-            {/* Mobile Menu Overlay */}
+            {/* Full Screen Menu Overlay */}
             {isMobileMenuOpen && (
-                <div className="fixed inset-0 z-[2000] bg-[var(--background)]/95 backdrop-blur-xl flex flex-col p-5 animate-in slide-in-from-right duration-300">
-                    <div className="flex justify-between items-center mb-8">
-                        <div className="flex items-center gap-2">
-                            <SquareTerminal size={26} strokeWidth={1.5} className="text-neutral-900 dark:text-white" />
-                            <span className="text-[22px] font-bold text-[var(--foreground)]">dailyKit</span>
-                        </div>
-                        <button
-                            onClick={() => setIsMobileMenuOpen(false)}
-                            className="p-2 text-[var(--foreground)]"
-                            aria-label="Close Menu"
-                        >
-                            <X size={24} />
-                        </button>
-                    </div>
+                <div className="fixed inset-0 z-[2000] bg-[var(--background)]/95 backdrop-blur-xl animate-in fade-in duration-200">
+                    <div className="w-[calc(100%-3rem)] max-w-[1280px] mx-auto mt-4 flex flex-col h-[calc(100%-2rem)]">
+                        {/* Header Part of Overlay */}
+                        <div className="h-[var(--header-height)] flex justify-between items-center px-6 rounded-2xl border border-[var(--border)] bg-[var(--background)]">
+                            {/* Logo */}
+                            <div className="flex items-center gap-2">
+                                <SquareTerminal size={26} strokeWidth={1.5} className="text-neutral-900 dark:text-white" />
+                                <span className="text-[22px] font-bold text-[var(--foreground)]">dailyKit</span>
+                            </div>
 
-                    <nav className="flex flex-col gap-6 text-lg font-medium">
-                        <Link href="/" onClick={() => setIsMobileMenuOpen(false)} className="py-2 border-b border-[var(--border)]">Home</Link>
-                        <Link href="/tools" onClick={() => setIsMobileMenuOpen(false)} className="py-2 border-b border-[var(--border)]">Tools</Link>
-                        <Link href="/about" onClick={() => setIsMobileMenuOpen(false)} className="py-2 border-b border-[var(--border)]">About</Link>
-                    </nav>
+                            {/* Close Button */}
+                            <button
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="text-sm font-medium uppercase tracking-wider hover:opacity-50 transition-opacity"
+                            >
+                                Close
+                            </button>
 
-                    <div className="mt-auto mb-8">
-                        <h3 className="text-sm font-bold text-[var(--text-sub)] mb-4 uppercase tracking-wider">Language</h3>
-                        <div className="grid grid-cols-2 gap-3">
-                            {Object.entries(languages).map(([code, label]) => (
-                                <button
-                                    key={code}
-                                    onClick={() => handleLanguageChange(code)}
-                                    className={`px-4 py-3 rounded-xl text-sm border transition-all ${locale === code
-                                        ? 'border-[var(--foreground)] bg-[var(--foreground)] text-[var(--background)]'
-                                        : 'border-[var(--border)] text-[var(--foreground)]'
-                                        }`}
-                                >
-                                    {label}
-                                </button>
-                            ))}
+                            {/* Placeholder for balance */}
+                            <div className="w-[26px]"></div>
                         </div>
+
+                        {/* Menu Grid */}
+                        <nav className="flex-1 overflow-y-auto py-4 no-scrollbar">
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+                                <Link href="/" onClick={() => setIsMobileMenuOpen(false)} className="flex items-center justify-center py-6 border border-[var(--border)] rounded-2xl text-sm font-medium uppercase tracking-widest hover:bg-[var(--foreground)] hover:text-[var(--background)] transition-all">Home</Link>
+                                <Link href="/tools" onClick={() => setIsMobileMenuOpen(false)} className="flex items-center justify-center py-6 border border-[var(--border)] rounded-2xl text-sm font-medium uppercase tracking-widest hover:bg-[var(--foreground)] hover:text-[var(--background)] transition-all">Tools</Link>
+                                <Link href="/about" onClick={() => setIsMobileMenuOpen(false)} className="flex items-center justify-center py-6 border border-[var(--border)] rounded-2xl text-sm font-medium uppercase tracking-widest hover:bg-[var(--foreground)] hover:text-[var(--background)] transition-all">About</Link>
+                                <Link href="/blog" onClick={() => setIsMobileMenuOpen(false)} className="flex items-center justify-center py-6 border border-[var(--border)] rounded-2xl text-sm font-medium uppercase tracking-widest hover:bg-[var(--foreground)] hover:text-[var(--background)] transition-all">Blog</Link>
+                                <Link href="/projects" onClick={() => setIsMobileMenuOpen(false)} className="flex items-center justify-center py-6 border border-[var(--border)] rounded-2xl text-sm font-medium uppercase tracking-widest hover:bg-[var(--foreground)] hover:text-[var(--background)] transition-all">Projects</Link>
+                                <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)} className="flex items-center justify-center py-6 border border-[var(--border)] rounded-2xl text-sm font-medium uppercase tracking-widest hover:bg-[var(--foreground)] hover:text-[var(--background)] transition-all">Contact</Link>
+                            </div>
+                        </nav>
                     </div>
                 </div>
             )}

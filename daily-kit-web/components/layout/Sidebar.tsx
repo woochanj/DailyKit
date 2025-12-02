@@ -20,7 +20,7 @@ export default function Sidebar() {
     const blogItem = navItems.find(item => item.href === '/blog');
 
     return (
-        <aside className="w-full md:w-64 flex-shrink-0 flex flex-row md:flex-col overflow-x-auto md:overflow-y-auto md:sticky md:top-[calc(var(--header-height)+2rem)] md:h-[calc(100vh-var(--header-height)-4rem)] gap-2 pb-2 md:pb-0 scrollbar-hide">
+        <aside className="w-full md:w-64 flex-shrink-0 flex flex-row md:flex-col overflow-x-auto md:overflow-y-auto md:sticky md:top-[calc(var(--header-height)+2rem)] md:h-[calc(100vh-var(--header-height)-4rem)] gap-2 pb-2 md:pb-0 scrollbar-hide md:pl-6">
             <nav className="flex flex-row md:flex-col gap-2 h-full w-full">
                 <div className="flex flex-row md:flex-col gap-2">
                     {toolItems.map((item) => {

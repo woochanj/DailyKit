@@ -15,7 +15,7 @@ export default function HomeClient() {
     const t = useTranslations('Index');
 
     return (
-        <div className="w-full max-w-[1024px] px-5 py-10 text-center flex-1 flex flex-col items-center mx-auto">
+        <div className="w-[calc(100%-3rem)] max-w-[1280px] py-10 text-center flex-1 flex flex-col items-center mx-auto">
             <div className="mb-16 text-center animate-[fadeIn_0.5s_ease-out]">
                 <h1 className="text-5xl font-bold tracking-tight text-gray-900 sm:text-6xl mb-4">
                     DailyKit
@@ -26,7 +26,7 @@ export default function HomeClient() {
             </div>
 
             {/* Category Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 w-full max-w-[1024px] mx-auto mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 w-full mb-12">
                 {/* Dev & Data */}
                 <BentoCard
                     title={t('devDataTitle')}
@@ -76,7 +76,7 @@ export default function HomeClient() {
             </div>
 
             {/* Most Popular Tools Section */}
-            <div className="w-full max-w-5xl text-left mb-8 mt-20">
+            <div className="w-full text-left mb-8 mt-20">
                 <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
                     🔥 {t('popularToolsTitle')}
                 </h2>

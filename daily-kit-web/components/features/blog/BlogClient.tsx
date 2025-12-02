@@ -6,7 +6,7 @@ export default function BlogClient() {
     const t = useTranslations('Blog');
 
     return (
-        <div className="container mx-auto py-12">
+        <div className="w-[calc(100%-3rem)] max-w-[1280px] mx-auto py-12">
             <h1 className="text-3xl font-bold mb-8">{t('title')}</h1>
             <div className="grid gap-6">
                 <div className="p-6 border rounded-lg shadow-sm">
