@@ -20,9 +20,9 @@ export default function Sidebar() {
     const blogItem = navItems.find(item => item.href === '/blog');
 
     return (
-        <aside className="w-full md:w-64 flex-shrink-0 md:sticky md:top-[calc(var(--header-height)+2rem)] md:h-[calc(100vh-var(--header-height)-4rem)] overflow-y-auto">
-            <nav className="flex flex-col gap-2 h-full">
-                <div className="flex-1 flex flex-col gap-2">
+        <aside className="w-full md:w-64 flex-shrink-0 flex flex-row md:flex-col overflow-x-auto md:overflow-y-auto md:sticky md:top-[calc(var(--header-height)+2rem)] md:h-[calc(100vh-var(--header-height)-4rem)] gap-2 pb-2 md:pb-0 scrollbar-hide">
+            <nav className="flex flex-row md:flex-col gap-2 h-full w-full">
+                <div className="flex flex-row md:flex-col gap-2">
                     {toolItems.map((item) => {
                         const isActive = item.exact
                             ? pathname === item.href
@@ -32,7 +32,7 @@ export default function Sidebar() {
                             <Link
                                 key={item.href}
                                 href={item.href}
-                                className={`flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200 group ${isActive
+                                className={`flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200 group flex-shrink-0 whitespace-nowrap ${isActive
                                     ? 'bg-[var(--foreground)] text-[var(--background)]'
                                     : 'text-[var(--text-sub)] hover:text-[var(--foreground)] hover:bg-[var(--foreground)]/5'
                                     }`}
@@ -44,16 +44,17 @@ export default function Sidebar() {
                     })}
                 </div>
 
-                <div className="w-full h-px bg-[var(--border)] my-2 opacity-50" />
+                <div className="hidden md:block w-full h-px bg-[var(--border)] my-2 opacity-50" />
+                <div className="md:hidden w-px h-full bg-[var(--border)] mx-2 opacity-50" />
 
                 {blogItem && (
                     <Link
                         href={blogItem.href}
-                        className="flex items-center gap-3 px-4 py-3 rounded-xl text-[var(--text-sub)] hover:text-[var(--foreground)] hover:bg-[var(--foreground)]/5 transition-all"
+                        className="flex items-center gap-3 px-4 py-3 rounded-xl text-[var(--text-sub)] hover:text-[var(--foreground)] hover:bg-[var(--foreground)]/5 transition-all flex-shrink-0 whitespace-nowrap"
                     >
                         <BookOpen size={20} strokeWidth={1.5} />
                         <span className="font-medium text-sm">Read Blog</span>
-                        <span className="ml-auto text-xs opacity-50">↗</span>
+                        <span className="hidden md:inline ml-auto text-xs opacity-50">↗</span>
                     </Link>
                 )}
             </nav>
