@@ -22,6 +22,7 @@ export default function ToolsList() {
                     icon={<Monitor size={32} />}
                     href="/tools/screen"
                     className="w-full sm:w-[320px]"
+                    color="175, 82, 222"
                 />
                 <BentoCard
                     title={t('deviceTestsTitle')}
@@ -29,6 +30,7 @@ export default function ToolsList() {
                     icon={<Gamepad2 size={32} />}
                     href="/tools/device"
                     className="w-full sm:w-[320px]"
+                    color="255, 149, 0"
                 />
                 <BentoCard
                     title={t('devDataTitle')}
@@ -36,6 +38,7 @@ export default function ToolsList() {
                     icon={<FileJson size={32} />}
                     href="/tools/dev-data"
                     className="w-full sm:w-[320px]"
+                    color="0, 113, 227"
                 />
                 {/* <BentoCard
                     title={t('healthLifeTitle')}
@@ -50,6 +53,7 @@ export default function ToolsList() {
                     icon={<BookOpen size={32} />}
                     href="/blog"
                     className="w-full sm:w-[320px]"
+                    color="255, 59, 48"
                 />
             </ToolGrid>
         </div>

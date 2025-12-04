@@ -22,6 +22,7 @@ export default function DeviceToolsList() {
                     icon={<Gamepad2 size={32} />}
                     href="/tools/device/gamepad-tester"
                     className="w-full sm:w-[320px]"
+                    color="88, 86, 214"
                 />
                 <BentoCard
                     title={t('keyboardTestTitle')}
@@ -29,6 +30,7 @@ export default function DeviceToolsList() {
                     icon={<Keyboard size={32} />}
                     href="/tools/device/keyboard-test"
                     className="w-full sm:w-[320px]"
+                    color="0, 199, 190"
                 />
                 <BentoCard
                     title={t('mouseTestTitle')}
@@ -36,6 +38,7 @@ export default function DeviceToolsList() {
                     icon={<Mouse size={32} />}
                     href="/tools/device/mouse-test"
                     className="w-full sm:w-[320px]"
+                    color="255, 149, 0"
                 />
             </ToolGrid>
         </div>

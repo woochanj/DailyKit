@@ -135,7 +135,7 @@ export default function KeyboardTestClient() {
                     {/* Sound Toggle */}
                     <button
                         onClick={() => setIsMuted(!isMuted)}
-                        className="flex items-center justify-center w-10 h-10 bg-[var(--card)] border border-[var(--border)] rounded-xl hover:bg-[var(--card-hover)] transition-colors"
+                        className="flex items-center justify-center w-10 h-10 bg-[var(--card)] border border-[var(--border)] rounded-xl hover:bg-[var(--foreground)]/5 hover:text-[var(--foreground)] transition-colors"
                         title={isMuted ? "Unmute" : "Mute"}
                     >
                         {isMuted ? <VolumeX size={20} className="text-gray-400" /> : <Volume2 size={20} className="text-blue-500" />}
@@ -144,7 +144,7 @@ export default function KeyboardTestClient() {
                     {/* Reset Button */}
                     <button
                         onClick={resetTest}
-                        className="flex items-center gap-2 px-4 py-2 bg-[var(--card)] border border-[var(--border)] rounded-xl hover:bg-[var(--card-hover)] transition-colors"
+                        className="flex items-center gap-2 px-4 py-2 bg-[var(--card)] border border-[var(--border)] rounded-xl hover:bg-[var(--foreground)]/5 hover:text-[var(--foreground)] transition-colors"
                     >
                         <RotateCcw size={18} />
                         {t('reset')}
@@ -162,7 +162,7 @@ export default function KeyboardTestClient() {
                             flex items-center gap-2 px-4 py-2 rounded-xl border transition-all whitespace-nowrap
                             ${layout === l
                                 ? "bg-blue-500 text-white border-blue-500 shadow-lg shadow-blue-500/20"
-                                : "bg-[var(--card)] border-[var(--border)] text-[var(--text-sub)] hover:bg-[var(--card-hover)]"
+                                : "bg-[var(--card)] border-[var(--border)] text-[var(--text-sub)] hover:bg-[var(--foreground)]/5 hover:text-[var(--foreground)]"
                             }
                         `}
                     >

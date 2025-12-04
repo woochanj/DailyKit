@@ -49,7 +49,7 @@ export default async function LocaleLayout({
             >
                 <NextIntlClientProvider messages={messages}>
                     <Header />
-                    <main className="flex-1 w-full pt-[calc(var(--header-height)+2rem)]">
+                    <main className="flex-1 w-[calc(100%-3rem)] max-w-[1280px] mx-auto pt-[calc(var(--header-height)+2rem)]">
                         {children}
                     </main>
                     <Footer />

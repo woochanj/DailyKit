@@ -5,6 +5,7 @@
   --text-main: #1d1d1f;
   --text-sub: #86868b;
   --accent-color: #0071e3;
+  --accent-rgb: 0, 113, 227;
   --bg-ad: #f5f5f7;
   --header-height: 60px;
 
@@ -16,6 +17,7 @@
   /* Tailwind Mappings */
   --background: #ffffff;
   --foreground: #1d1d1f;
+  --foreground-rgb: 29, 29, 31;
 
   --card: #ffffff;
   --card-foreground: #1d1d1f;
@@ -80,6 +82,7 @@
 
     --background: #000000;
     --foreground: #f5f5f7;
+    --foreground-rgb: 245, 245, 247;
 
     --card: #1d1d1f;
     --card-foreground: #f5f5f7;
@@ -88,6 +91,7 @@
     --popover-foreground: #f5f5f7;
 
     --primary: #2997ff;
+    --accent-rgb: 41, 151, 255;
     --primary-foreground: #ffffff;
 
     --secondary: #1d1d1f;

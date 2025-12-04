@@ -33,6 +33,7 @@ export default function HomeClient() {
                     description={t('devDataDesc')}
                     icon={<FileJson size={32} strokeWidth={1} />}
                     href="/tools/dev-data"
+                    color="0, 113, 227"
                 />
 
                 {/* Screen Tests */}
@@ -41,6 +42,7 @@ export default function HomeClient() {
                     description={t('screenTestsDesc')}
                     icon={<Monitor size={64} strokeWidth={0.8} />}
                     href="/tools/screen"
+                    color="175, 82, 222"
                 />
 
                 {/* Device Tests */}
@@ -49,6 +51,7 @@ export default function HomeClient() {
                     description={t('deviceTestsDesc')}
                     icon={<Gamepad2 size={64} strokeWidth={0.8} />}
                     href="/tools/device"
+                    color="255, 149, 0"
                 />
 
                 {/* Health & Life */}
@@ -65,6 +68,7 @@ export default function HomeClient() {
                     description={t('blogDesc')}
                     icon={<BookOpen size={32} strokeWidth={1} />}
                     href="/blog"
+                    color="255, 59, 48"
                 />
 
                 {/* AdSense Placeholder (Wide) */}
@@ -87,6 +91,7 @@ export default function HomeClient() {
                         icon={<FileJson size={24} />}
                         className="w-full md:w-[240px] h-[180px]"
                         href="/tools/screen-device-tests/display-test"
+                        color="52, 199, 89"
                     />
                 </div>
             </div>
