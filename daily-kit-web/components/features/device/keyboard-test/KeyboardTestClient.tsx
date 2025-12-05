@@ -19,6 +19,11 @@ export default function KeyboardTestClient() {
     const [isMuted, setIsMuted] = useState(false);
     const audioRef = useRef<HTMLAudioElement | null>(null);
 
+    // Debug State
+
+
+
+
     const CHATTER_THRESHOLD = 50; // ms
 
     // Initialize Audio
@@ -36,16 +41,25 @@ export default function KeyboardTestClient() {
         }
     }, [isMuted]);
 
+    const normalizeKeyCode = (e: KeyboardEvent) => {
+        if (e.code) return e.code;
+        // Fallback for missing code based on location
+        if (e.key === 'Shift') return e.location === 1 ? 'ShiftLeft' : 'ShiftRight';
+        if (e.key === 'Control') return e.location === 2 ? 'ControlRight' : 'ControlLeft';
+        if (e.key === 'Alt') return e.location === 2 ? 'AltRight' : 'AltLeft';
+        if (e.key === 'Meta') return e.location === 2 ? 'MetaRight' : 'MetaLeft';
+        return e.code || `Unidentified_${e.keyCode}`;
+    };
+
     const handleKeyDown = useCallback((e: KeyboardEvent) => {
-        // Allow typing in the playground textarea
-        const isTextarea = e.target instanceof HTMLTextAreaElement;
-        if (!isTextarea) {
-            e.preventDefault();
-        }
+        e.preventDefault();
+
+        const code = normalizeKeyCode(e);
+
+
 
         playSound();
 
-        const code = e.code;
         const now = Date.now();
 
         setKeyStates(prev => {
@@ -174,14 +188,7 @@ export default function KeyboardTestClient() {
                 ))}
             </div>
 
-            {/* Typing Playground */}
-            <div className="mb-8">
-                <textarea
-                    className="w-full h-24 bg-transparent border border-[var(--border)] rounded-xl p-4 text-lg font-sans placeholder:text-[var(--text-sub)]/50 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all resize-none"
-                    placeholder="Type here to test input (Hangul/English)..."
-                    spellCheck={false}
-                />
-            </div>
+
 
             {/* Virtual Keyboard */}
             <VirtualKeyboard keyStates={keyStates} layout={layout} />
@@ -199,6 +206,10 @@ export default function KeyboardTestClient() {
                     </div>
                 </div>
             )}
+
+
+
+
 
             {/* Ad Placeholder (Golden Zone) */}
             <div className="w-full bg-[var(--card)] border border-[var(--border)] rounded-2xl p-6 mb-8 flex flex-col items-center justify-center min-h-[120px]">
